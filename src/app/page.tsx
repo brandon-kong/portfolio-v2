@@ -25,7 +25,7 @@ export default function Home() {
     return (
         <main className="w-full flex flex-col space-y-32 items-center">
             <div
-            className={'max-w-4xl w-full flex flex-col gap-8'}
+            className={'w-full flex flex-col gap-8'}
             >
                 <Tag variant={'primary'}>
                     Available for work
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
 
             <div
-            className={'flex flex-col gap-8 w-full max-w-4xl'}
+            className={'flex flex-col gap-8 w-full'}
             >
                 <H2>Selected Work</H2>
 
@@ -89,7 +89,7 @@ export default function Home() {
                             title={work.title}
                             description={'Research Assistant'}
                             tags={['Research', 'Bioinformatics']}
-                            image={work.img}
+                            image={'/markups/project1.jpg'}
                             link={'https://depaul.edu'}
                             />
                         )

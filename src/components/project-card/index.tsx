@@ -1,4 +1,6 @@
+import Image from "next/image"
 import { H3, H4, P } from ".."
+import Link from "next/link"
 
 export type ProjectCardProps = {
     title: string,
@@ -10,19 +12,21 @@ export type ProjectCardProps = {
 
 export default function ProjectCard ({ title, description, tags, image, link }: ProjectCardProps) {
     return (
-        <div
-        className={'w-full h-full bg-background-secondary flex flex-col items-center justify-center gap-5'}
-        >
-            <div className={'aspect-[1.3/1] w-full relative bg-background-secondary-300 rounded-xl overflow-hidden'} >
-                <img src={image} alt={title} className={'w-full h-full absolute'} />
-            </div>
-
+        <Link href={link}>
             <div
-            className={'flex flex-col gap-1 w-full'}
+            className={'group w-full h-full bg-background-secondary flex flex-col items-center justify-center gap-5'}
             >
-                <P className={'font-medium'}>{title}</P>
-                <P className={'text-md text-background-secondary-300'}>{description}</P>
+                <div className={'aspect-[1.3/1] w-full relative bg-background-secondary-300 rounded-xl overflow-hidden'} >
+                    <Image src={image} alt={title} fill={true} className={'w-full h-full absolute group-hover:scale-110 transition-transform duration-500'} />
+                </div>
+
+                <div
+                className={'flex flex-col gap-1 w-full'}
+                >
+                    <P className={'font-medium'}>{title}</P>
+                    <P className={'text-md text-background-secondary-300'}>{description}</P>
+                </div>
             </div>
-        </div>
+        </Link>
     )
 }

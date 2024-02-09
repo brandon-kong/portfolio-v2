@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/layout/sidebar";
+import Link from "next/link";
+import { P } from "@/components";
 
 const inter = Inter({ 
     subsets: ["latin", "cyrillic-ext", "greek", "vietnamese"],
@@ -25,10 +27,21 @@ export default function RootLayout({
                     <Sidebar />
 
                     <div
-                    className={'w-full rounded-xl p-main-padding'}
+                    className={'w-full rounded-xl p-main-padding '}
                     >
-                        <div className={'w-full p-32 bg-background-secondary h-full flex flex-col items-center'}>
-                            {children}
+                        <div className={'w-full bg-background-secondary'}>
+                            <div className={'max-w-4xl mx-auto w-full py-32 h-full flex flex-col items-center gap-32'}>
+                                {children}
+
+                                <div
+                                className={'w-full'}
+                                >
+                                    <hr className={'w-full border-background-secondary-900/50 mt-10 mb-10'} />
+                                    <div className={'flex items-center justify-start gap-4'}>
+                                        <P className={'text-background-secondary-400 text-sm'}>©2024 Brandon Kong</P>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
