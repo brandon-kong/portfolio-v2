@@ -129,7 +129,7 @@ export default function Home() {
                             link={'https://depaul.edu'}
                             />
                         )
-                    })} 
+                    })}
                 </div>
             </motion.div>
         </main>
