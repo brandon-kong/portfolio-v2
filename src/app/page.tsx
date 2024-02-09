@@ -1,6 +1,10 @@
+'use client';
+
 import { Button, H1, H2, P, Tag } from "@/components";
 import ProjectCard from "@/components/project-card";
 import { Briefcase, MapPin } from "react-feather";
+
+import { motion } from "framer-motion";
 
 const selectedWork = [
     {
@@ -75,7 +79,12 @@ export default function Home() {
                 
             </div>
 
-            <div
+            <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            transition={{ duration: 1, delay: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+
             className={'flex flex-col gap-8 w-full'}
             >
                 <H2>Selected Work</H2>
@@ -95,10 +104,34 @@ export default function Home() {
                         )
                     })}
                 </div>
+            </motion.div>
 
+            <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            transition={{ duration: 1, delay: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
 
-            </div>
-            
+            className={'flex flex-col gap-8 w-full'}
+            >
+                <H2>Blog</H2>
+
+                <div
+                className={'grid grid-cols-2 gap-8'}>
+                    {selectedWork.map((work, index) => {
+                        return (
+                            <ProjectCard
+                            key={index}
+                            title={work.title}
+                            description={'Research Assistant'}
+                            tags={['Research', 'Bioinformatics']}
+                            image={'/markups/project1.jpg'}
+                            link={'https://depaul.edu'}
+                            />
+                        )
+                    })}
+                </div>
+            </motion.div>
         </main>
     );
 }
