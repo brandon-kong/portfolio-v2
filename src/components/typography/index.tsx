@@ -31,7 +31,7 @@ const H2 = ({ className, children }: TypographyProps) => {
 
 const H3 = ({ className, children }: TypographyProps) => {
     return (
-        <h3 className={cn("scroll-m-20 text-2xl font-semibold tracking-wide", className)}>
+        <h3 className={cn("scroll-m-20 text-2xl font-medium leading-normal tracking-[-0.03em]", className)}>
             {children}
         </h3>
     );

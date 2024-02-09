@@ -1,3 +1,5 @@
+'use client';
+
 import { H4, P } from "@/components";
 import Image from "next/image";
 import { Home, Briefcase, User, PenTool, Mail } from "react-feather";
@@ -7,16 +9,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
     {
         name: 'Homepage',
-        href: '#',
+        href: '/',
         icon: Home
     },
     {
         name: 'Projects',
-        href: '#',
+        href: '/projects',
         icon: Briefcase
     },
     {
@@ -50,7 +53,10 @@ const links = [
         icon: faGithub
     }
 ]
+
 export default function Sidebar() {
+    const pathname = usePathname();
+
   return (
     <aside className="hidden lg:block fixed py-10 px-6 w-sidebar">
         <div
@@ -109,7 +115,7 @@ export default function Sidebar() {
         <nav>
             <ul className="space-y-1 mt-8">
                 {navItems.map((item, index) => {
-                    const isSelected = item.name === 'Homepage';
+                    const isSelected = pathname === item.href;
                     return (
                     <li key={index} 
                     data-selected={isSelected}
