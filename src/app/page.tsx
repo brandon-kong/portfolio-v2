@@ -1,18 +1,35 @@
-import { Button, H1, H2, P } from "@/components";
+import { Button, H1, H2, P, Tag } from "@/components";
+import ProjectCard from "@/components/project-card";
 import { Briefcase, MapPin } from "react-feather";
 
 const selectedWork = [
     {
         img: 'https://via.placeholder.com/150',
         title: 'DePaul University',
+    },
+    {
+        img: 'https://via.placeholder.com/150',
+        title: 'DePaul University',
+    },
+    {
+        img: 'https://via.placeholder.com/150',
+        title: 'DePaul University',
+    },
+    {
+        img: 'https://via.placeholder.com/150',
+        title: 'DePaul University',
     }
 ]
+
 export default function Home() {
     return (
-        <main className="w-full p-32 bg-background-secondary h-full rounded-xl flex flex-col space-y-40 items-center">
+        <main className="w-full flex flex-col space-y-32 items-center">
             <div
             className={'max-w-4xl w-full flex flex-col gap-8'}
             >
+                <Tag variant={'primary'}>
+                    Available for work
+                </Tag>
                 <div>
                     <H1> Hello! I{'\’'}m Brandon 👋</H1>
                     <H1 className={'text-background-secondary-300'}>
@@ -56,6 +73,30 @@ export default function Home() {
                     </Button>
                 </div>
                 
+            </div>
+
+            <div
+            className={'flex flex-col gap-8 w-full max-w-4xl'}
+            >
+                <H2>Selected Work</H2>
+
+                <div
+                className={'grid grid-cols-2 gap-8'}>
+                    {selectedWork.map((work, index) => {
+                        return (
+                            <ProjectCard
+                            key={index}
+                            title={work.title}
+                            description={'Research Assistant'}
+                            tags={['Research', 'Bioinformatics']}
+                            image={work.img}
+                            link={'https://depaul.edu'}
+                            />
+                        )
+                    })}
+                </div>
+
+
             </div>
             
         </main>

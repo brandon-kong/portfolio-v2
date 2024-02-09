@@ -27,7 +27,9 @@ export default function RootLayout({
                     <div
                     className={'w-full rounded-xl p-main-padding'}
                     >
-                        {children}
+                        <div className={'w-full p-32 bg-background-secondary h-full flex flex-col items-center'}>
+                            {children}
+                        </div>
                     </div>
                     
                 </div>
