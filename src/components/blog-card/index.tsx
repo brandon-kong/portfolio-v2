@@ -38,7 +38,7 @@ export default function BlogCard ({ title, description, tags, image, link, date 
                         <Button
                         href={link}
                         variant={'outline-mono'}
-                        className={'w-fit mt-4'}
+                        className={'w-full sidebar-shown:w-fit mt-4'}
                         >
                             Read More
                         </Button>
@@ -48,7 +48,7 @@ export default function BlogCard ({ title, description, tags, image, link, date 
                
             </div>
 
-            <div className={'aspect-[1.333333/1] w-full sidebar-shown:w-[320px] relative bg-background-secondary-300 rounded-xl overflow-hidden'} >
+            <div className={'aspect-[1.333333/1] w-full sidebar-shown:w-[420px] relative bg-background-secondary-300 rounded-xl overflow-hidden'} >
                 <Image src={image} alt={title} fill={true} className={'w-full h-full absolute object-cover transition-transform duration-500'} />
             </div>
         </div>

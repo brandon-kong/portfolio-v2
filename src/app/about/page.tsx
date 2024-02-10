@@ -13,11 +13,11 @@ import BackgroundCard, { BackgroundCardProps } from "@/components/background-car
 const programmingLanguages = [
     {
         "name": "Python",
-        "className": "rounded-t-xl sidebar-shown:rounded-tl-xl"
+        "className": "rounded-t-xl sidebar-shown:rounded-tr-none"
     },
     {
         "name": "Java",
-        "className": "sidebar-shwon:rounded-tr-xl"
+        "className": "sidebar-shown:rounded-tr-xl"
     },
     {
         "name": "JavaScript",
@@ -31,18 +31,18 @@ const programmingLanguages = [
     },
     {
         "name": "GoLang",
-        "className": "rounded-b-xl sidebar-shown:rounded-br-xl"
+        "className": "rounded-b-xl sidebar-shown:rounded-bl-none"
     }
 ]
 
 const tools = [
     {
         "name": "React",
-        "className": "rounded-t-xl sidebar-shown:rounded-tl-xl"
+        "className": "rounded-t-xl sidebar-shown:rounded-tr-none"
     },
     {
         "name": "Next.js",
-        "className": "sidebar-shwon:rounded-tr-xl"
+        "className": "sidebar-shown:rounded-tr-xl"
     },
     {
         "name": "TailwindCSS",
@@ -56,7 +56,7 @@ const tools = [
     },
     {
         "name": "Docker",
-        "className": "rounded-b-xl sidebar-shown:rounded-br-xl"
+        "className": "rounded-b-xl sidebar-shown:rounded-bl-none"
     }
 
 ]
@@ -112,7 +112,7 @@ const education: BackgroundCardProps[] = [
 
 export default function Projects() {
     return (
-        <main className="w-full flex flex-col space-y-32">
+        <main className="w-full flex flex-col space-y-20 sidebar-shown:space-y-32">
             <div
             className={'w-full flex gap-10'}
             >

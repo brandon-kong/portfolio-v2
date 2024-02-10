@@ -53,7 +53,7 @@ const blogs: BlogCardProps[] = [
 
 export default function Projects() {
     return (
-        <main className="w-full flex flex-col space-y-32">
+        <main className="w-full flex flex-col space-y-20 sidebar-shown:space-y-32">
             <div
             className={'w-full flex flex-col gap-8'}
             >
@@ -79,7 +79,7 @@ export default function Projects() {
             className={'flex flex-col gap-8 w-full'}
             >
                 <div
-                className={'grid grid-cols-2 gap-8'}>
+                className={'grid grid-cols-1 lg:grid-cols-2 gap-8'}>
                     {selectedWork.map((work, index) => {
                         return (
                             <ProjectCard

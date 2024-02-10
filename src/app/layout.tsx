@@ -33,7 +33,7 @@ export default function RootLayout({
                     className={'w-full rounded-xl p-main-padding'}
                     >
                         <div className={'w-full bg-background-secondary min-h-screen'}>
-                            <div className={'max-w-content-width mx-auto w-full py-32 h-full flex flex-col items-center gap-32 px-6 sidebar-shown:px-0'}>
+                            <div className={'max-w-content-width mx-auto w-full py-16 sidebar-shown:py-32 h-full flex flex-col items-center gap-32 px-6 sidebar-shown:px-0 lg-max:px-16 icon-only:px-6'}>
                                 {children}
 
                                 <div

@@ -4,6 +4,7 @@
 
 :root {
 
+    --navbar-height: 80px;
     --sidebar-width: 280px;
     --main-padding: .5rem .5rem .5rem calc(var(--sidebar-width) + .5rem);
     --content-width: 908px;
@@ -20,7 +21,7 @@
     /* Screens */
 
     --sidebar-icon-only: 1368px;
-    --sidebar-hidden: 850px;
+    --sidebar-hidden: 875px;
 }
 
 @media (max-width: 1368px) {
@@ -30,10 +31,10 @@
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 875px) {
     :root {
       --sidebar-width: 0;
-      --main-padding: .5rem;
+      --main-padding: calc(var(--navbar-height) + .5rem) .5rem .5rem .5rem;
       --content-width: 100%;
     }
 }

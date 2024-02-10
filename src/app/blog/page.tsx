@@ -53,7 +53,7 @@ const blogs: BlogCardProps[] = [
 
 export default function Blog() {
     return (
-        <main className="w-full flex flex-col space-y-32">
+        <main className="w-full flex flex-col space-y-20 sidebar-shown:space-y-32">
             <div
             className={'w-full flex flex-col gap-8'}
             >
@@ -79,7 +79,7 @@ export default function Blog() {
             className={'flex flex-col gap-8 w-full'}
             >
                 <div
-                className={'flex flex-col gap-16'}>
+                className={'flex flex-col gap-8 sidebar-shown:gap-16 '}>
                     {blogs.map((blog, index) => {
                         return (
                             <BlogCard
