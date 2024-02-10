@@ -58,7 +58,8 @@ export default function Sidebar() {
     const pathname = usePathname();
 
   return (
-    <aside className="hidden sidebar-shown:block fixed py-10 px-3 icon-only:px-6 w-sidebar">
+    <aside className="hidden sidebar-shown:block fixed py-10 px-3 icon-only:px-6 w-sidebar h-full">
+        <div>
         <div
         className={'flex flex-col items-center justify-center w-full'}
         >
@@ -71,12 +72,12 @@ export default function Sidebar() {
                 height={2000}
                 alt="logo"
                 priority
-                className="w-14 h-14 rounded-full aspect-square"
+                className="w-12 h-12 icon-only:h-14 icon-only:w-14 rounded-full aspect-square"
                 />
             </div>
 
             <div
-            className={'flex-col items-center justify-center mt-5 hidden 2xl:flex'}
+            className={'flex-col items-center justify-center mt-5 hidden icon-only:flex'}
             >
                 <H4 className="text-md font-medium">Brandon Kong</H4>
                 <H4 className="mt-1 text-sm tracking-[0] font-normal text-background-secondary-400">
@@ -113,8 +114,10 @@ export default function Sidebar() {
             </div>
         </div>
 
-        <nav>
-            <ul className="space-y-1 mt-8 flex flex-col items-center flex-1">
+        <nav
+        className={'h-auto w-full flex-1'}
+        >
+            <ul className="space-y-1 mt-8 flex flex-col items-center h-full">
                 {navItems.map((item, index) => {
                     const isSelected = pathname === item.href;
                     return (
@@ -141,6 +144,8 @@ export default function Sidebar() {
                 })}
             </ul>
         </nav>
+
+        </div>
         
         <hr className="my-8 mx-auto w-1/2 border-t-2 border-background-secondary-900/50 block icon-only:hidden" />
         <div

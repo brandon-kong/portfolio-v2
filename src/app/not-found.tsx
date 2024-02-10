@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="global flex justify-center items-center gap-10">
+    <div className="global flex flex-col sidebar-shown:flex-row justify-center items-center gap-10">
 
         <div
         >
@@ -13,7 +13,7 @@ export default function NotFound() {
             <Button
             href={'/'}
             variant={'outline'}
-            className={'mt-8'}
+            className={'w-full sidebar-shown:w-fit mt-8'}
             >
                 Go home
             </Button>
