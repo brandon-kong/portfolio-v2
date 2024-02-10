@@ -9,7 +9,7 @@ export default function NotFound() {
         <div
         >
             <H1>Uh Oh!</H1>
-            <P>Looks like you&apos;re lost. Let&apos;s get you back on track.</P>
+            <P className={'text-background-secondary-300'}>Looks like you&apos;re lost. Let&apos;s get you back on track.</P>
             <Button
             href={'/'}
             variant={'outline'}
