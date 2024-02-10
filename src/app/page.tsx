@@ -86,7 +86,7 @@ export default function Home() {
                 </P>
 
                 <div
-                className={'flex space-x-4'}
+                className={'flex flex-col sidebar-shown:flex-row  gap-4'}
                 >
                     <Button
                     href={'/about'}
@@ -118,7 +118,7 @@ export default function Home() {
                 <H2>Selected Work</H2>
 
                 <div
-                className={'grid grid-cols-2 gap-8'}>
+                className={'grid grid-cols-1 sidebar-shown:grid-cols-2 gap-8'}>
                     {selectedWork.map((work, index) => {
                         return (
                             <ProjectCard

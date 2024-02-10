@@ -13,11 +13,11 @@ import BackgroundCard, { BackgroundCardProps } from "@/components/background-car
 const programmingLanguages = [
     {
         "name": "Python",
-        "className": "rounded-tl-xl"
+        "className": "rounded-t-xl sidebar-shown:rounded-tl-xl"
     },
     {
         "name": "Java",
-        "className": "rounded-tr-xl"
+        "className": "sidebar-shwon:rounded-tr-xl"
     },
     {
         "name": "JavaScript",
@@ -27,22 +27,22 @@ const programmingLanguages = [
     },
     {
         "name": "C/C++",
-        "className": "rounded-bl-xl"
+        "className": "sidebar-shown:rounded-bl-xl"
     },
     {
         "name": "GoLang",
-        "className": "rounded-br-xl"
+        "className": "rounded-b-xl sidebar-shown:rounded-br-xl"
     }
 ]
 
 const tools = [
     {
         "name": "React",
-        "className": "rounded-tl-xl"
+        "className": "rounded-t-xl sidebar-shown:rounded-tl-xl"
     },
     {
         "name": "Next.js",
-        "className": "rounded-tr-xl"
+        "className": "sidebar-shwon:rounded-tr-xl"
     },
     {
         "name": "TailwindCSS",
@@ -52,11 +52,11 @@ const tools = [
     },
     {
         "name": "Express",
-        "className": "rounded-bl-xl"
+        "className": "sidebar-shown:rounded-bl-xl"
     },
     {
         "name": "Docker",
-        "className": "rounded-br-xl"
+        "className": "rounded-b-xl sidebar-shown:rounded-br-xl"
     }
 
 ]
@@ -141,7 +141,9 @@ export default function Projects() {
                     
                 </div>
 
-                <div>
+                <div
+                className={'hidden sidebar-shown:block'}
+                >
                     <Image src={'/images/profile-picture.jpg'} width={2000} height={2000} alt={'profile-picture'} priority className={'w-[200px] h-[200px] rounded-full aspect-square'} />
                 </div>
             </div>
@@ -157,7 +159,7 @@ export default function Projects() {
                 <H2>Programming Languages</H2>
 
                 <div
-                className={'grid grid-cols-2 gap-1'}>
+                className={'grid grid-cols-1 sidebar-shown:grid-cols-2 gap-1'}>
                     {programmingLanguages.map((prog, index) => {
                         return (
                             <GridCard
@@ -182,7 +184,7 @@ export default function Projects() {
                 <H2>Tools</H2>
 
                 <div
-                className={'grid grid-cols-2 gap-1'}>
+                className={'grid grid-cols-1 sidebar-shown:grid-cols-2 gap-1'}>
                     {tools.map((prog, index) => {
                         return (
                             <GridCard

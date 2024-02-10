@@ -6,6 +6,7 @@
 
     --sidebar-width: 280px;
     --main-padding: .5rem .5rem .5rem calc(var(--sidebar-width) + .5rem);
+    --content-width: 908px;
 
     /* Colors */
     --color-primary: #fed53a;
@@ -18,12 +19,30 @@
 
     /* Screens */
 
-    --sidebar-icon-only: 1156px;
+    --sidebar-icon-only: 1368px;
+    --sidebar-hidden: 850px;
+}
+
+@media (max-width: 1368px) {
+    :root {
+      --sidebar-width: 80px;
+      --content-width: 728px;
+    }
+}
+
+@media (max-width: 850px) {
+    :root {
+      --sidebar-width: 0;
+      --main-padding: .5rem;
+      --content-width: 100%;
+    }
 }
 
 body {
     color: var(--color-background);
 }
+
+
 
 @layer utilities {
     .text-balance {

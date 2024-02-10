@@ -47,6 +47,10 @@ const config: Config = {
             width: {
                 "sidebar": "var(--sidebar-width)",
                 "sidebar-expanded": "var(--sidebar-width-expanded)",
+                "content-width": "var(--content-width)",
+            },
+            maxWidth: {
+                "content-width": "var(--content-width)",
             },
             spacing: {
                 "main-padding": "var(--main-padding)",
@@ -60,6 +64,9 @@ const config: Config = {
             "lg": "1024px",
             "xl": "1280px",
             "2xl": "1536px",
+
+            "icon-only": "1368px",
+            "sidebar-shown": "850px",
 
             "sidebar-icon-only": "var(--sidebar-icon-only)",
         }

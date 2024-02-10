@@ -18,7 +18,7 @@ export default function BackgroundCard ({ title, subtitle, description, dateRang
             className={'flex flex-col gap-1 w-full'}
             >   
                 <div
-                className={'flex gap-8'}
+                className={'flex flex-col sidebar-shown:flex-row gap-8'}
                 >
                     <div
                     className={'max-w-[200px] w-full'}

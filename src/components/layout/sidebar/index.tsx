@@ -58,7 +58,7 @@ export default function Sidebar() {
     const pathname = usePathname();
 
   return (
-    <aside className="hidden lg:block fixed py-10 px-6 w-sidebar">
+    <aside className="hidden sidebar-shown:block fixed py-10 px-3 icon-only:px-6 w-sidebar">
         <div
         className={'flex flex-col items-center justify-center w-full'}
         >
@@ -86,7 +86,7 @@ export default function Sidebar() {
         </div>
 
         <div
-        className={'mt-8 flex flex-col items-center justify-center'}
+        className={'mt-8 flex-col items-center justify-center hidden icon-only:flex'}
         >
             <div
             className={'flex flex-row-reverse items-center justify-center gap-4'}
@@ -112,23 +112,24 @@ export default function Sidebar() {
                 
             </div>
         </div>
+
         <nav>
-            <ul className="space-y-1 mt-8">
+            <ul className="space-y-1 mt-8 flex flex-col items-center flex-1">
                 {navItems.map((item, index) => {
                     const isSelected = pathname === item.href;
                     return (
                     <li key={index} 
                     data-selected={isSelected}
-                    className="group h-[40px] w-full hover:bg-background-secondary-900/40 rounded-xl px-3 transition-colors duration-300 cursor-pointer data-[selected=true]:bg-background-secondary-900"
+                    className="aspect-square icon-only:aspect-auto w-12 icon-only:w-full group h-auto icon-only:h-[40px] hover:bg-background-secondary-900/40 rounded-xl px-0 icon-only:px-3 transition-colors duration-300 cursor-pointer data-[selected=true]:bg-background-secondary-900"
                     >
                         <Link
                         href={item.href}
-                        className="h-full w-full flex items-center justify-start gap-3"
+                        className="h-full w-full flex items-center justify-center icon-only:justify-start gap-3"
                         >
                             <item.icon className={cn("w-5 h-5 stroke-background-secondary-400", isSelected && "stroke-background-secondary-50")} />
                             
                             <span
-                            className={cn('font-semibold text-background-secondary-400 text-sm', isSelected && 'text-background-secondary-50')}
+                            className={cn('font-semibold text-background-secondary-400 text-sm hidden icon-only:inline-block', isSelected && 'text-background-secondary-50')}
                             >
                                 {item.name}
                             </span>
@@ -140,6 +141,36 @@ export default function Sidebar() {
                 })}
             </ul>
         </nav>
+        
+        <hr className="my-8 mx-auto w-1/2 border-t-2 border-background-secondary-900/50 block icon-only:hidden" />
+        <div
+        className={'flex-col items-center justify-center flex icon-only:hidden'}
+        >
+            
+            <div
+            className={'flex flex-col items-center justify-center gap-4'}
+            >
+                {
+                    links.map((link, index) => {
+                        return (
+                        <Link
+                        key={index}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group w-8 h-8 rounded-full aspect-square p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900"
+                        >
+                            <FontAwesomeIcon
+                            icon={link.icon}
+                            className="w-6 h-6 text-background-secondary-500 group-hover:text-background-secondary-50 duration-300 aspect-square"
+                            />
+                        </Link>
+                        )
+                    })
+                }
+                
+            </div>
+        </div>
     </aside>
   )
 }

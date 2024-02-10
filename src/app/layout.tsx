@@ -33,7 +33,7 @@ export default function RootLayout({
                     className={'w-full rounded-xl p-main-padding'}
                     >
                         <div className={'w-full bg-background-secondary min-h-screen'}>
-                            <div className={'max-w-4xl mx-auto w-full py-32 h-full flex flex-col items-center gap-32'}>
+                            <div className={'max-w-content-width mx-auto w-full py-32 h-full flex flex-col items-center gap-32 px-6 sidebar-shown:px-0'}>
                                 {children}
 
                                 <div
@@ -48,7 +48,7 @@ export default function RootLayout({
                         </div>
                     </div>
                 </div>
-                
+
                 <SpeedInsights />
             </body>
         </html>
