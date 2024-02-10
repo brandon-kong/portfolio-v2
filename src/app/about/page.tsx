@@ -222,7 +222,7 @@ export default function Projects() {
                             />
 
                             {
-                                index !== education.length - 1 && (
+                                index !== experiences.length - 1 && (
                                     <div
                                     className={'w-full border-t-2 border-background-secondary-900/50'}
                                     />
