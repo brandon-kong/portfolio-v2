@@ -30,9 +30,9 @@ export default function RootLayout({
                         <Sidebar />
 
                         <div
-                        className={'w-full rounded-xl p-main-padding '}
+                        className={'w-full rounded-xl p-main-padding'}
                         >
-                            <div className={'w-full bg-background-secondary'}>
+                            <div className={'w-full bg-background-secondary min-h-screen'}>
                                 <div className={'max-w-4xl mx-auto w-full py-32 h-full flex flex-col items-center gap-32'}>
                                     {children}
 

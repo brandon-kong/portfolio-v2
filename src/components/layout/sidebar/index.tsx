@@ -24,17 +24,17 @@ const navItems = [
     },
     {
         name: 'About',
-        href: '#',
+        href: '/about',
         icon: User
     },
     {
         name: 'Blog',
-        href: '#',
+        href: '/blog',
         icon: PenTool
     },
     {
         name: 'Contact',
-        href: '#',
+        href: '/contact',
         icon: Mail
     }
     

@@ -51,60 +51,23 @@ const blogs: BlogCardProps[] = [
     },
 ]
 
-export default function Home() {
+export default function Blog() {
     return (
-        <main className="w-full flex flex-col space-y-32 items-center">
+        <main className="w-full flex flex-col space-y-32">
             <div
             className={'w-full flex flex-col gap-8'}
             >
-                <Tag variant={'primary'}>
-                    Available for work
-                </Tag>
-                <div>
-                    <H1> Hello! I{'\’'}m Brandon 👋</H1>
-                    <H1 className={'text-background-secondary-300'}>
-                        Code. Code. Repeat. 🚀
-                    </H1>
-                </div>
-
                 <div
-                className={'flex items-center space-x-2'}
+                className={'flex flex-col gap-2'}
                 >
-                    <MapPin className="w-5 h-5 stroke-primary-300" />
-                    <P className="text-primary-300 text-md">
-                        Chicago, Illinois
+                    <H1>Blog</H1>
+                    
+                    <P
+                    className={'text-background-secondary-300'}
+                    >
+                        I write about my experiences, thoughts, and ideas. I also share my research and findings in the field of bioinformatics and computer science.
                     </P>
                 </div>
-
-                <P
-                className={'text-paragraph text-background-secondary-300'}
-                >
-                    I{'\’'}m a software engineer with a passion for building products that make a difference. 
-                    I{'\’'}m currently working as a research assistant at DePaul University, where I{'\’'}m 
-                    working in Bioinformatics and Computational Biology in the context of brainstem nuclei 
-                    boundary classification. 
-                </P>
-
-                <div
-                className={'flex space-x-4'}
-                >
-                    <Button
-                    href={'/about'}
-                    variant={'background'}
-                    >
-                        About
-                    </Button>
-
-                    <Button
-                    href={'/projects'}
-                    variant={'outline'}
-                    className={'flex gap-2 items-center'}
-                    >
-                        <Briefcase className="w-5 h-5 stroke-primary-400" />
-                        Projects
-                    </Button>
-                </div>
-                
             </div>
 
             <motion.div
@@ -115,35 +78,6 @@ export default function Home() {
 
             className={'flex flex-col gap-8 w-full'}
             >
-                <H2>Selected Work</H2>
-
-                <div
-                className={'grid grid-cols-2 gap-8'}>
-                    {selectedWork.map((work, index) => {
-                        return (
-                            <ProjectCard
-                            key={index}
-                            title={work.title}
-                            description={'Research Assistant'}
-                            tags={['Research', 'Bioinformatics']}
-                            image={'/markups/project1.jpg'}
-                            link={'https://depaul.edu'}
-                            />
-                        )
-                    })}
-                </div>
-            </motion.div>
-
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
-                <H2>Blog</H2>
-
                 <div
                 className={'flex flex-col gap-16'}>
                     {blogs.map((blog, index) => {

@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
 
     --sidebar-width: 280px;
     --main-padding: .5rem .5rem .5rem calc(var(--sidebar-width) + .5rem);
@@ -25,7 +22,7 @@
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
+    color: var(--color-background);
 }
 
 @layer utilities {
