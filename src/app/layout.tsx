@@ -5,7 +5,7 @@ import Sidebar from "@/components/layout/sidebar";
 import Link from "next/link";
 import { P } from "@/components";
 
-import { AnimatePresence } from "framer-motion";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ 
     subsets: ["latin", "cyrillic-ext", "greek", "vietnamese"],
@@ -25,30 +25,31 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-              
-                    <div className={'bg-background text-white min-h-screen flex'}>
-                        <Sidebar />
+                
+                <div className={'bg-background text-white min-h-screen flex'}>
+                    <Sidebar />
 
-                        <div
-                        className={'w-full rounded-xl p-main-padding'}
-                        >
-                            <div className={'w-full bg-background-secondary min-h-screen'}>
-                                <div className={'max-w-4xl mx-auto w-full py-32 h-full flex flex-col items-center gap-32'}>
-                                    {children}
+                    <div
+                    className={'w-full rounded-xl p-main-padding'}
+                    >
+                        <div className={'w-full bg-background-secondary min-h-screen'}>
+                            <div className={'max-w-4xl mx-auto w-full py-32 h-full flex flex-col items-center gap-32'}>
+                                {children}
 
-                                    <div
-                                    className={'w-full'}
-                                    >
-                                        <hr className={'w-full border-background-secondary-900/50 mt-10 mb-10'} />
-                                        <div className={'flex items-center justify-start gap-4'}>
-                                            <P className={'text-background-secondary-400 text-sm'}>©2024 Brandon Kong</P>
-                                        </div>
+                                <div
+                                className={'w-full'}
+                                >
+                                    <hr className={'w-full border-background-secondary-900/50 mt-10 mb-10'} />
+                                    <div className={'flex items-center justify-start gap-4'}>
+                                        <P className={'text-background-secondary-400 text-sm'}>©2024 Brandon Kong</P>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 
+                <SpeedInsights />
             </body>
         </html>
     );
