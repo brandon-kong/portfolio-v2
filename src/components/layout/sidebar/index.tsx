@@ -99,11 +99,11 @@ export default function Sidebar() {
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="group rounded-full p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900"
+                        className="group w-8 h-8 rounded-full aspect-square p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900"
                         >
                             <FontAwesomeIcon
                             icon={link.icon}
-                            className="w-6 h-6 text-background-secondary-500 group-hover:text-background-secondary-50 duration-300"
+                            className="w-6 h-6 text-background-secondary-500 group-hover:text-background-secondary-50 duration-300 aspect-square"
                             />
                         </Link>
                         )
