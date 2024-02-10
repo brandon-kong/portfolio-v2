@@ -11,7 +11,7 @@ export type GridCardProps = {
 export default function GridCard ({ className, children }: GridCardProps) {
     return (
         <div
-        className={cn('w-full h-full p-5 bg-background-secondary-900/50', className)}
+        className={cn('w-full p-5 bg-background-secondary-900/50', className)}
         >
             { children }
         </div>

@@ -159,7 +159,7 @@ export default function Projects() {
                 <H2>Programming Languages</H2>
 
                 <div
-                className={'grid grid-cols-1 sidebar-shown:grid-cols-2 gap-1'}>
+                className={'h-fit grid grid-cols-1 sidebar-shown:grid-cols-2 gap-1'}>
                     {programmingLanguages.map((prog, index) => {
                         return (
                             <GridCard
