@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/layout/sidebar";
-import Link from "next/link";
 import { P } from "@/components";
+import { Analytics } from '@vercel/analytics/react';
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/layout/navbar";
@@ -52,7 +52,8 @@ export default function RootLayout({
                         </div>
                     </div>
                 </div>
-
+                
+                <Analytics />
                 <SpeedInsights />
             </body>
         </html>
