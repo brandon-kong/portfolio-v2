@@ -6,6 +6,7 @@ import Link from "next/link";
 import { P } from "@/components";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Navbar from "@/components/layout/navbar";
 
 const inter = Inter({ 
     subsets: ["latin", "cyrillic-ext", "greek", "vietnamese"],
@@ -27,7 +28,10 @@ export default function RootLayout({
             <body className={inter.className}>
                 
                 <div className={'bg-background text-white min-h-screen flex'}>
+                   
                     <Sidebar />
+                    <Navbar />
+                    
 
                     <div
                     className={'w-full p-main-padding'}

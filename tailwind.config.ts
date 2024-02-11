@@ -52,6 +52,9 @@ const config: Config = {
             maxWidth: {
                 "content-width": "var(--content-width)",
             },
+            height: {
+                "navbar": "var(--navbar-height)",
+            },
             spacing: {
                 "main-padding": "var(--main-padding)",
                 "sidebar": "var(--sidebar-width)",
