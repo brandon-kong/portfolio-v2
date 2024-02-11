@@ -23,6 +23,7 @@ export default function TestimonialCard ({ className, content, name, title, imag
             <div
             className={'flex items-center gap-4 mt-4'}
             >
+                <Image src={'https://via.placeholder.com/56'} width={56} height={56} alt={name} className={'w-14 h-14 rounded-full'} />
                 <div
                 className={'flex flex-col items-start gap-1'}
                 >
