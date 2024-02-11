@@ -26,7 +26,7 @@ const getProject = async (slug: string): Promise<Project | undefined> => {
 
 const getAllProjects = async (): Promise<Project[] | undefined> => {
     return new Promise(async (resolve, reject) => {
-        axios.get<Project[]>(`http://localhost:3000/api/projects`)
+        axios.get<Project[]>(`${process.env.SITE_URL}/api/projects`)
         .then((response) => {
             resolve(response.data)
             return response
