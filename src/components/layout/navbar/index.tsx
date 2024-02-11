@@ -66,9 +66,9 @@ export default function Navbar() {
 
   return (
     <div
-    className={'flex flex-col'}
+    className={'flex-col flex sidebar-shown:hidden'}
     >
-        <aside className="z-[100] bg-background flex sidebar-shown:hidden flex-row justify-center fixed py-3 px-6 icon-only:px-6 w-full h-navbar">
+        <aside className="z-[100] bg-background flex flex-row justify-center fixed py-3 px-6 icon-only:px-6 w-full h-navbar">
             <div
             className={'flex flex-row items-center justify-between w-full'}
             >
