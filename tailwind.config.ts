@@ -58,6 +58,7 @@ const config: Config = {
             spacing: {
                 "main-padding": "var(--main-padding)",
                 "sidebar": "var(--sidebar-width)",
+                "navbar": "var(--navbar-height)",
             },
         },
 
