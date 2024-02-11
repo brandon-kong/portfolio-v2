@@ -1,28 +1,6 @@
 'use client';
 
-import { Button, ProjectCard, BlogCard, H1, H2, P, Tag, BlogCardProps } from "@/components";
-import { Briefcase, MapPin } from "react-feather";
-
-import { motion } from "framer-motion";
-
-const selectedWork = [
-    {
-        img: 'https://via.placeholder.com/150',
-        title: 'DePaul University',
-    },
-    {
-        img: 'https://via.placeholder.com/150',
-        title: 'DePaul University',
-    },
-    {
-        img: 'https://via.placeholder.com/150',
-        title: 'DePaul University',
-    },
-    {
-        img: 'https://via.placeholder.com/150',
-        title: 'DePaul University',
-    }
-]
+import { BlogCard, H1, P, BlogCardProps, SlideIn } from "@/components";
 
 const blogs: BlogCardProps[] = [
     {
@@ -70,14 +48,7 @@ export default function Blog() {
                 </div>
             </div>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <div
                 className={'flex flex-col gap-8 sidebar-shown:gap-16 '}>
                     {blogs.map((blog, index) => {
@@ -94,7 +65,7 @@ export default function Blog() {
                         )
                     })}
                 </div>
-            </motion.div>
+            </SlideIn>
         </main>
     );
 }

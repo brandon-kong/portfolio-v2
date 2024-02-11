@@ -1,17 +1,19 @@
-'use client';
 
 import React from "react";
 
-import { Button, ProjectCard, BlogCard, H1, H2, P, Tag, BlogCardProps, TitledListItem } from "@/components";
-import { Briefcase, ChevronLeft, MapPin } from "react-feather";
+import { Button, H1, P, Tag, TitledListItem, SlideIn } from "@/components";
+import { ChevronLeft, Eye } from "react-feather";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import GridCard from "@/components/grid-card";
-import BackgroundCard, { BackgroundCardProps } from "@/components/background-card";
 import Link from "next/link";
 import ProjectBackgroundCard from "@/components/project-background-card";
 import TestimonialCard from "@/components/testimonial";
+import { getProject } from "@/util/projects";
+import { notFound } from "next/navigation";
+
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const tools = [
     {
@@ -35,60 +37,16 @@ const tools = [
         "className": "rounded-b-xl"
 
     },
-
-
 ]
 
-const experiences: BackgroundCardProps[] = [
-    {
-        "title": "Software Engineer",
-        "subtitle": "Google",
-        "description": "Engaged in executing studies, trial runs with users, brainstorming, sketching blueprints, and crafting refined user experiences and user interfaces for iOS, Android, and the Web. Closely partnering with engineers, product supervisors, and important personnel. Designing experiences that are guided by data and centered on the user.",
-        "dateRange": "March 2020 – Present"
-    },
-    {
-        "title": "Software Engineer",
-        "subtitle": "Facebook",
-        "description": "Designing sleek, result-oriented, user-friendly interfaces for web and mobile platforms, guaranteeing superior outcomes, coordinating design projects among internal and external teams, guiding new members of the design team, aligning creative outputs with the objectives of clients, and intensely collaborating with developers and engineers.",
-        "dateRange": "March 2019 – 2020"
-    },
-    {
-        "title": "Software Engineer",
-        "subtitle": "Amazon",
-        "description": "Generating aesthetic frameworks, models for web and mobile apps, cooperating with the creative team, interested parties, product chiefs and coders in a flexible setting.",
-        "dateRange": "March 2018 – 2019"
-    },
-]
+export default async function Project({ params }: { params: { slug: string } }) {
 
-const education: BackgroundCardProps[] = [
-    {
-        "title": "High School Diploma",
-        "subtitle": "Valencia High School",
-        "description": "",
-        "dateRange": "2022"
-    },
-    {
-        "title": "Bachelor of Science in Computer Science",
-        "subtitle": "DePaul University",
-        "description": (
-            <div>
-                <p>GPA: 3.96/4.0</p>
-                <p>Relevant coursework</p>
-                <ul className={'list-disc ml-5'}>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Design and Analysis of Algorithms</li>
-                    <li>Computer Systems I/II</li>
-                    <li>Discrete Mathematics I/II</li>
-                    <li>Concepts of Programming Languages</li>
-                    <li>Software Engineering</li>
-                </ul>
-            </div>
-        ),
-        "dateRange": "Sep 2022 – Present"
-    },
-]
+    const project = await getProject(params.slug);
 
-export default function Project() {
+    if (!project) {
+        return notFound();
+    }
+
     return (
         <main className="w-full flex flex-col gap-20 sidebar-shown:space-y-3 -mt-10 sidebar-shown:-mt-20">
             
@@ -108,206 +66,154 @@ export default function Project() {
                 <div
                 className={'flex gap-2 flex-wrap'}
                 >
-                    <Tag
-                    >
-                        #fullstack
-                    </Tag>
-
-                    <Tag
-                    >
-                        #web
-                    </Tag>
-
-                    <Tag
-                    >
-                        #api
-                    </Tag>
+                    {
+                        project.tags.map(( tag, index ) => {
+                            return (
+                                <Tag key={index}>{ tag }</Tag>
+                            )
+                        })
+                    }
                 </div>
 
                 <div
                 className={'flex flex-col flex-1 gap-10'}
                 >
                     <div className={'space-y-2'}>
-                        <H1>Sword API</H1>
+                        <H1> { project.name }</H1>
                         <P
                         className={'text-background-secondary-300'}
                         >
-                        Battle test your API with Sword API. A powerful, easy-to-use, and flexible API testing tool that allows you to test your API endpoints with ease.
+                        { project.description }
                         </P>
                     </div>
                     
-            
-
-                    <Button
-                    href={'#'}
-                    variant={'background'}
-                    className={'w-fit'}
+                    
+                    <div
+                    className={'flex gap-4 items-center'}
                     >
-                        Live Preview
-                    </Button>
+                        {
+                            project.links.github && 
+                            <Button
+                            href={project.links.github}
+                            variant={'background'}
+                            target={'_blank'}
+                            className={'gap-3 px-4'}
+                            >
+                                <FontAwesomeIcon icon={faGithub} className={'w-5 h-5'} />
+                                View Source
+                            </Button>
+                        }
+
+                        {
+                            project.links.live && 
+                            <Button
+                            href={project.links.live}
+                            target={'_blank'}
+                            variant={'background'}
+                            className={'gap-3 px-4'}
+                            >
+                                <Eye size={20} className={'w-5 h-5'} />
+                                View Live
+                            </Button>
+                        }
+
+                    </div>
+                    
+                   
                 </div>
             </div>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <div
                 className={'relative rounded-xl overflow-hidden w-full aspect-[1.3/1]'}
                 >
-                    <Image src={'/markups/project1.jpg'} alt={'Project Image'} width={1920} height={2000} 
+                    <Image src={project.head_image || '/markups/project1.jpg'} alt={'Project Image'} width={1920} height={2000} 
                     className={'object-cover absolute top-0 left-0 w-full h-full rounded-xl'}
                     />
                 </div>
-            </motion.div>
+            </SlideIn>
             
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
 
                 <ProjectBackgroundCard
                 title={'Background'}
                 >
                     <P>
-                    Sword API was created to help developers test their API endpoints with ease. It is a powerful, easy-to-use, and flexible API testing tool that allows you to test your API endpoints with ease.
+                    { project.background.content }
                     </P>
                 </ProjectBackgroundCard>
                 
-            </motion.div>
+            </SlideIn>
             
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <hr className={'w-full border-t-2 border-background-secondary-900/50'} />
-            </motion.div>
+            </SlideIn>
             
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <ProjectBackgroundCard
                 title={'Goals'}
                 >
                     <ul className={'list-disc space-y-12'}>
-                        <TitledListItem 
-                        number={1}
-                        title={'Bringing a new dimension to user experiences and interfaces.'}
-                        description={'In the realm of technology, artificial intelligence (AI) and machine learning have emerged as game-changers, particularly in the field of UI/UX design. The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces.'}
-                        />
-
-                        <TitledListItem 
-                        number={2}
-                        title={'Bringing a new dimension to user experiences and interfaces.'}
-                        description={'The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges'}
-                        />
-
-                        <TitledListItem 
-                        number={3}
-                        title={'Bringing a new dimension to user experiences and interfaces.'}
-                        description={'The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces.'}
-                        />
+                        {project.goals.map((goal, index) => {
+                            return (
+                                <TitledListItem 
+                                key={index}
+                                number={index + 1}
+                                title={goal.title}
+                                description={goal.content}
+                                />
+                            )
+                        })}
                     </ul>
                 </ProjectBackgroundCard>
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <div
                 className={'relative rounded-xl overflow-hidden w-full aspect-[1.3/1]'}
                 >
-                    <Image src={'/markups/project1.jpg'} alt={'Project Image'} width={1920} height={2000} 
+                    <Image src={project.secondary_image || '/markups/project1.jpg'} alt={'Project Image'} width={1920} height={2000} 
                     className={'object-cover absolute top-0 left-0 w-full h-full rounded-xl'}
                     />
                 </div>
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <ProjectBackgroundCard
                 title={'Solutions'}
                 >
                     <ul className={'list-disc space-y-12'}>
-                        <TitledListItem 
-                        number={1}
-                        title={'Bringing a new dimension to user experiences and interfaces.'}
-                        description={'In the realm of technology, artificial intelligence (AI) and machine learning have emerged as game-changers, particularly in the field of UI/UX design. The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces.'}
-                        />
-
-                        <TitledListItem 
-                        number={2}
-                        title={'Bringing a new dimension to user experiences and interfaces.'}
-                        description={'The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges'}
-                        />
-
-                        <TitledListItem 
-                        number={3}
-                        title={'Bringing a new dimension to user experiences and interfaces.'}
-                        description={'The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces.'}
-                        />
+                        {project.solutions.map((solution, index) => {
+                            return (
+                                <TitledListItem 
+                                key={index}
+                                number={index + 1}
+                                title={solution.title}
+                                description={solution.content}
+                                />
+                            )
+                        })}
                     </ul>
                 </ProjectBackgroundCard>
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <hr className={'w-full border-t-2 border-background-secondary-900/50'} />
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <ProjectBackgroundCard
                 title={'Tools'}
                 >
                     <div
                     className={'grid grid-cols-1 gap-1'}>
-                        {tools.map((prog, index) => {
+                        {project.tools.map((prog, index) => {
                             return (
                                 <GridCard
-                                className={prog.className}
+                                className={
+                                    `${index === 0 ? 'rounded-t-xl' : ''} ${index === project.tools.length - 1 ? 'rounded-b-xl' : ''}`}
                                 key={index}
                                 >
                                     { prog.name }
@@ -316,40 +222,26 @@ export default function Project() {
                         })}
                     </div>
                 </ProjectBackgroundCard>
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <TestimonialCard
-                name={'John Doe'}
-                title={'Software Engineer'}
-                content={'We\'ve worked with Brandon multiple times, and it has always been a pleasure! He helped us craft engaging landing pages that convert well. Brandon works in a very timely manner and always ensures that you are fully satisfied with the results!'}
+                name={project.testimonial.name}
+                title={project.testimonial.title}
+                content={project.testimonial.content}
                 
                 />
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <ProjectBackgroundCard
                 title={'Conclusion'}
                 >
                     <P>
-                    Sword API is a powerful, easy-to-use, and flexible API testing tool that allows you to test your API endpoints with ease.
+                        { project.conclusion.content }
                     </P>
                 </ProjectBackgroundCard>
-            </motion.div>
+            </SlideIn>
         </main>
     );
 }

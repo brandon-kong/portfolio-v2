@@ -2,10 +2,8 @@
 
 import React from "react";
 
-import { Button, ProjectCard, BlogCard, H1, H2, P, Tag, BlogCardProps } from "@/components";
-import { Briefcase, MapPin } from "react-feather";
+import { H1, H2, P, SlideIn } from "@/components";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import GridCard from "@/components/grid-card";
 import BackgroundCard, { BackgroundCardProps } from "@/components/background-card";
@@ -168,14 +166,7 @@ export default function Projects() {
                 </div>
             </div>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <H2>Programming Languages</H2>
 
                 <div
@@ -191,16 +182,9 @@ export default function Projects() {
                         )
                     })}
                 </div>
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <H2>Tools</H2>
 
                 <div
@@ -216,16 +200,9 @@ export default function Projects() {
                         )
                     })}
                 </div>
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <H2>Experiences</H2>
 
                 <div
@@ -254,16 +231,9 @@ export default function Projects() {
                         )
                     })}
                 </div>
-            </motion.div>
+            </SlideIn>
 
-            <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            transition={{ duration: 1, delay: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-
-            className={'flex flex-col gap-8 w-full'}
-            >
+            <SlideIn>
                 <H2>Education</H2>
 
                 <div
@@ -292,7 +262,7 @@ export default function Projects() {
                         )
                     })}
                 </div>
-            </motion.div>
+            </SlideIn>
         </main>
     );
 }

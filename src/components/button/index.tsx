@@ -19,7 +19,7 @@ const sizes = {
     sm: "h-9 px-5 text-xs",
     md: "h-11 py-5 px-6",
     lg: "h-12 px-8",
-    icon: "h-9 w-9",
+    icon: "h-9 w-9 flex items-center justify-center",
 }
 
 type VariantKey = keyof typeof variants
@@ -32,14 +32,15 @@ export type ButtonProps = {
     children?: React.ReactNode
     onClick?: () => void
     href?: string
+    target?: string
     
 };
 
-const Button = ({ className, variant = "primary", size = "md", children, onClick, href }: ButtonProps) => {
+const Button = ({ className, target, variant = "primary", size = "md", children, onClick, href }: ButtonProps) => {
     
     if (href) {
         return (
-            <Link href={href} className={cn(shared, sizes[size], variants[variant], className)} onClick={onClick}>
+            <Link target={target} href={href} className={cn(shared, sizes[size], variants[variant], className)} onClick={onClick}>
                 {children}
             </Link>
         )

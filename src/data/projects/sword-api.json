@@ -1,0 +1,87 @@
+{
+    "tags": ["fullstack", "web", "api", "testing", "tool", "development", "design", "ui", "ux", "react", "next.js", "tailwindcss", "docker", "django", "postgresql"],
+    "name": "Sword API",
+    "description": "Battle test your API with Sword API. A powerful, easy-to-use, and flexible API testing tool that allows you to test your API endpoints with ease.",
+    "preview_link": "/projects",
+    "slug": "sword-api",
+    
+    "head_image": "/markups/project1.jpg",
+
+    "background": {
+        "content": "Sword API was created to help developers test their API endpoints with ease. It is a powerful, easy-to-use, and flexible API testing tool that allows you to test your API endpoints with ease."
+    },
+
+    "goals": [
+        {
+            "title": "Bringing a new dimension to user experiences and interfaces.",
+            "content": "In the realm of technology, artificial intelligence (AI) and machine learning have emerged as game-changers, particularly in the field of UI/UX design. The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces."
+        },
+        {
+            "title": "Bringing a new dimension to user experiences and interfaces.",
+            "content": "The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges"
+        },
+        {
+            "title": "Bringing a new dimension to user experiences and interfaces.",
+            "content": "The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces."
+        }
+    ],
+
+    "secondary_image": "/markups/project1.jpg",
+
+    "solutions": [
+        {
+            "title": "Bringing a new dimension to user experiences and interfaces.",
+            "content": "In the realm of technology, artificial intelligence (AI) and machine learning have emerged as game-changers, particularly in the field of UI/UX design. The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces."
+        },
+        {
+            "title": "Bringing a new dimension to user experiences and interfaces.",
+            "content": "The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges"
+        },
+        {
+            "title": "Bringing a new dimension to user experiences and interfaces.",
+            "content": "The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces."
+        }
+    ],
+
+    "tools": [
+        {
+            "name": "React",
+            "image": ""
+        },
+        {
+            "name": "Next.js",
+            "image": ""
+        },
+        {
+            "name": "TailwindCSS",
+            "image": ""
+        },
+        {
+            "name": "Docker",
+            "image": ""
+        },
+        {
+            "name": "Django",
+            "image": ""
+        },
+        {
+            "name": "PostgreSQL",
+            "image": ""
+        }
+    ],
+
+    "testimonial": {
+        "name": "John Doe",
+        "title": "Software Engineer",
+        "content": "We've worked with Brandon multiple times, and it has always been a pleasure! He helped us craft engaging landing pages that convert well. Brandon works in a very timely manner and always ensures that you are fully satisfied with the results!"
+    },
+
+    "conclusion": {
+        "content": "Sword API was created to help developers test their API endpoints with ease. It is a powerful, easy-to-use, and flexible API testing tool that allows you to test your API endpoints with ease."
+    },
+
+    "links": {
+        "github": "https://github.com/brandon-kong",
+        "live": "/projects"
+    }
+}

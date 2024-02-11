@@ -1,4 +1,4 @@
-import { Button, H1, P } from "@/components";
+import { Button, H1, P, SlideIn } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,8 +19,9 @@ export default function NotFound() {
             </Button>
         </div>
         
-
+      <SlideIn className={'w-fit'}>
         <Image src={'/gifs/quack.gif'} alt={'404 Duck'} width={300} height={300} className={'mt-8'} />
+      </SlideIn>
     </div>
   );
 }

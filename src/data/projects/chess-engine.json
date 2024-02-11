@@ -1,0 +1,86 @@
+{
+    "tags": ["game", "web", "api", "testing", "tool", "development", "design", "ui", "ux", "react", "next.js", "tailwindcss", "docker", "django", "postgresql"],
+    "name": "Chess Engine",
+    "description": "A robust, efficient, and interactive chess engine. Built to deliver a seamless and enjoyable chess playing experience.",
+    "preview_link": "/projects",
+    "slug": "chess-engine",
+    
+    "head_image": "/markups/chess.jpg",
+
+    "background": {
+        "content": "Chess Engine was created to provide a seamless and enjoyable chess playing experience. It is a robust, efficient, and interactive tool that allows you to play chess with ease."
+    },
+
+    "goals": [
+        {
+            "title": "Delivering a seamless chess playing experience.",
+            "content": "In the realm of game development, creating an intuitive and engaging user interface is crucial. Our goal with Chess Engine was to create a platform that makes the game of chess easily accessible and enjoyable for everyone."
+        },
+        {
+            "title": "Creating an efficient and robust chess engine.",
+            "content": "Efficiency and robustness were our top priorities while developing the chess engine. We wanted to ensure that the game runs smoothly and provides accurate and fair gameplay."
+        },
+        {
+            "title": "Making chess more interactive and enjoyable.",
+            "content": "We aimed to make the game of chess more interactive and enjoyable by incorporating various features like hints, move history, and an option to play against an AI."
+        }
+    ],
+
+    "secondary_image": "/markups/chess.jpg",
+
+    "solutions": [
+        {
+            "title": "Intuitive User Interface.",
+            "content": "We designed an intuitive user interface that makes it easy for players to make moves, view move history, and access other features."
+        },
+        {
+            "title": "Efficient Chess Engine.",
+            "content": "We developed an efficient chess engine that ensures smooth gameplay and fair results."
+        },
+        {
+            "title": "Interactive Features.",
+            "content": "We incorporated various interactive features like hints and an option to play against an AI to make the game more enjoyable."
+        }
+    ],
+
+    "tools": [
+        {
+            "name": "React",
+            "image": ""
+        },
+        {
+            "name": "Next.js",
+            "image": ""
+        },
+        {
+            "name": "TailwindCSS",
+            "image": ""
+        },
+        {
+            "name": "Docker",
+            "image": ""
+        },
+        {
+            "name": "Django",
+            "image": ""
+        },
+        {
+            "name": "PostgreSQL",
+            "image": ""
+        }
+    ],
+
+    "testimonial": {
+        "name": "Jane Doe",
+        "title": "Software Engineer",
+        "content": "Working on the Chess Engine project was a great experience! The team was dedicated and the project was challenging and exciting. The final product is something we're all proud of."
+    },
+
+    "conclusion": {
+        "content": "Chess Engine was created to provide a seamless and enjoyable chess playing experience. It is a robust, efficient, and interactive tool that allows you to play chess with ease."
+    },
+
+    "links": {
+        "github": "https://github.com/brandon-kong/chess"
+    }
+}
