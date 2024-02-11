@@ -121,7 +121,8 @@ export default function Sidebar() {
             >
                 <ul className="space-y-1 mt-8 flex flex-col items-center h-full">
                     {navItems.map((item, index) => {
-                        const isSelected = pathname === item.href;
+                        const firstPath = "/" + pathname.split('/')[1]
+                        const isSelected = pathname === item.href || firstPath === item.href;
                         return (
                         <li key={index} 
                         data-selected={isSelected}

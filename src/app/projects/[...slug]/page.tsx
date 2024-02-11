@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { Button, ProjectCard, BlogCard, H1, H2, P, Tag, BlogCardProps } from "@/components";
+import { Button, ProjectCard, BlogCard, H1, H2, P, Tag, BlogCardProps, TitledListItem } from "@/components";
 import { Briefcase, ChevronLeft, MapPin } from "react-feather";
 
 import { motion } from "framer-motion";
@@ -11,6 +11,7 @@ import GridCard from "@/components/grid-card";
 import BackgroundCard, { BackgroundCardProps } from "@/components/background-card";
 import Link from "next/link";
 import ProjectBackgroundCard from "@/components/project-background-card";
+import TestimonialCard from "@/components/testimonial";
 
 const tools = [
     {
@@ -207,10 +208,24 @@ export default function Project() {
                 <ProjectBackgroundCard
                 title={'Goals'}
                 >
-                    <ul className={'list-disc ml-5'}>
-                        <li>Test API endpoints</li>
-                        <li>Easy-to-use</li>
-                        <li>Flexible</li>
+                    <ul className={'list-disc space-y-12'}>
+                        <TitledListItem 
+                        number={1}
+                        title={'Bringing a new dimension to user experiences and interfaces.'}
+                        description={'In the realm of technology, artificial intelligence (AI) and machine learning have emerged as game-changers, particularly in the field of UI/UX design. The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces.'}
+                        />
+
+                        <TitledListItem 
+                        number={2}
+                        title={'Bringing a new dimension to user experiences and interfaces.'}
+                        description={'The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges'}
+                        />
+
+                        <TitledListItem 
+                        number={3}
+                        title={'Bringing a new dimension to user experiences and interfaces.'}
+                        description={'The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces.'}
+                        />
                     </ul>
                 </ProjectBackgroundCard>
             </motion.div>
@@ -241,11 +256,27 @@ export default function Project() {
             className={'flex flex-col gap-8 w-full'}
             >
                 <ProjectBackgroundCard
-                title={'Solution'}
+                title={'Solutions'}
                 >
-                    <P>
-                    Sword API is a powerful, easy-to-use, and flexible API testing tool that allows you to test your API endpoints with ease.
-                    </P>
+                    <ul className={'list-disc space-y-12'}>
+                        <TitledListItem 
+                        number={1}
+                        title={'Bringing a new dimension to user experiences and interfaces.'}
+                        description={'In the realm of technology, artificial intelligence (AI) and machine learning have emerged as game-changers, particularly in the field of UI/UX design. The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces.'}
+                        />
+
+                        <TitledListItem 
+                        number={2}
+                        title={'Bringing a new dimension to user experiences and interfaces.'}
+                        description={'The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges'}
+                        />
+
+                        <TitledListItem 
+                        number={3}
+                        title={'Bringing a new dimension to user experiences and interfaces.'}
+                        description={'The integration of these advanced technologies is reshaping how we approach design, offering new possibilities and challenges. This post aims to explore how AI and machine learning are influencing the field of UI/UX, bringing a new dimension to user experiences and interfaces.'}
+                        />
+                    </ul>
                 </ProjectBackgroundCard>
             </motion.div>
 
@@ -285,6 +316,22 @@ export default function Project() {
                         })}
                     </div>
                 </ProjectBackgroundCard>
+            </motion.div>
+
+            <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            transition={{ duration: 1, delay: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+
+            className={'flex flex-col gap-8 w-full'}
+            >
+                <TestimonialCard
+                name={'John Doe'}
+                title={'Software Engineer'}
+                content={'We\'ve worked with Brandon multiple times, and it has always been a pleasure! He helped us craft engaging landing pages that convert well. Brandon works in a very timely manner and always ensures that you are fully satisfied with the results!'}
+                
+                />
             </motion.div>
 
             <motion.div

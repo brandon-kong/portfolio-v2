@@ -10,3 +10,9 @@ export type { ProjectCardProps } from './project-card';
 
 export { default as BlogCard } from './blog-card';
 export type { BlogCardProps } from './blog-card';
+
+export { default as ProjectBackgroundCard } from './project-background-card';
+export type { ProjectBackgroundCardProps } from './project-background-card';
+
+export { default as TitledListItem } from './titled-list-item';
+export type { TitledListItemProps } from './titled-list-item';
