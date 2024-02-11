@@ -20,10 +20,10 @@ const programmingLanguages = [
         "className": "sidebar-shown:rounded-tr-xl"
     },
     {
-        "name": "JavaScript",
+        "name": "JavaScript/TypeScript",
     },
     {
-        "name": "TypeScript",
+        "name": "C#",
     },
     {
         "name": "C/C++",
@@ -37,21 +37,41 @@ const programmingLanguages = [
 
 const tools = [
     {
-        "name": "React",
+        "name": "React/Next.js",
         "className": "rounded-t-xl sidebar-shown:rounded-tr-none"
     },
     {
-        "name": "Next.js",
-        "className": "sidebar-shown:rounded-tr-xl"
-    },
-    {
         "name": "TailwindCSS",
+        "className": "sidebar-shown:rounded-tr-xl"
     },
     {
         "name": "Node.js",
     },
     {
         "name": "Express",
+    },
+    {
+        "name": "MongoDB",
+    },
+    {
+        "name": "PostgreSQL",
+    },
+    {
+        "name": "Redis",
+    },
+    {
+        "name": "AWS"
+    },
+    {
+        "name": "JWT & OAuth",
+    },
+
+    {
+        "name": "ASP.NET Core",
+    },
+
+    {
+        "name": "RESTful APIs",
         "className": "sidebar-shown:rounded-bl-xl"
     },
     {
@@ -129,12 +149,12 @@ export default function Projects() {
                         <P
                         className={'text-background-secondary-300'}
                         >
-                        I’m Brandon, a product designer and design system specialist from Poland with over 9 years of experience focusing on user experience and design systems to creating a user-centered design in SaaS products.
+                        I’m Brandon, a software engineer based in Chicago, IL. I specialize in building robust, user-friendly, and scalable applications and software. I have a strong passion for developing innovative solutions and solving complex problems. 
                         </P>
 
                         <P
                         className={'text-background-secondary-300 mt-5'}>
-                            Co-creator at Tetrisly one of the most popular starter kits for design systems. I had the opportunity to work with Phenom.com, Bidroom.com or Perfops.net but also with many startups from around the world as a Lead Designer.
+                            Research assistant at DePaul University, where I am currently pursuing a Bachelor of Science in Computer Science. I have spoken at IEEE conferences and have been actively involved in research projects. Currently, I am working on a project that will improve the public transportation system in Chicago.
                         </P>
 
                     </div>

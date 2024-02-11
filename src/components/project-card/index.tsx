@@ -14,7 +14,7 @@ export default function ProjectCard ({ title, description, tags, image, link }: 
     return (
         <Link href={link}>
             <div
-            className={'group w-full h-full bg-background-secondary flex flex-col items-center justify-center gap-5'}
+            className={'group w-full bg-background-secondary flex flex-col items-center justify-center gap-5'}
             >
                 <div className={'aspect-[1.3/1] w-full relative bg-background-secondary-300 rounded-xl overflow-hidden'} >
                     <Image src={image} alt={title} fill={true} className={'w-full h-full absolute group-hover:scale-110 transition-transform duration-500'} />

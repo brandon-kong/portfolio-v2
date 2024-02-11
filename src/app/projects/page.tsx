@@ -7,19 +7,21 @@ import { motion } from "framer-motion";
 
 const selectedWork = [
     {
-        img: 'https://via.placeholder.com/150',
+        title: 'Chess Engine',
+        description: 'A powerful chess engine that uses machine learning to predict the best moves.',
+        image: '/markups/chess.jpg',
+        link: '/projects/chess-engine'
+    },
+    {
+        title: 'Faceade',
+        description: 'A multiplayer game using facial recognition',
+        image: '/markups/faceade.jpg',
+        link: '/projects/faceade'
+    },
+    {
         title: 'DePaul University',
     },
     {
-        img: 'https://via.placeholder.com/150',
-        title: 'DePaul University',
-    },
-    {
-        img: 'https://via.placeholder.com/150',
-        title: 'DePaul University',
-    },
-    {
-        img: 'https://via.placeholder.com/150',
         title: 'DePaul University',
     }
 ]
@@ -58,10 +60,10 @@ export default function Projects() {
                             <ProjectCard
                             key={index}
                             title={work.title}
-                            description={'Research Assistant'}
+                            description={work.description || 'Research Assistant'}
                             tags={['Research', 'Bioinformatics']}
-                            image={'/markups/project1.jpg'}
-                            link={'/projects/test'}
+                            image={work.image || '/markups/project1.jpg'}
+                            link={work.link || 'https://depaul.edu'}
                             />
                         )
                     })}
