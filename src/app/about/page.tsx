@@ -81,32 +81,26 @@ const tools = [
 
 const experiences: BackgroundCardProps[] = [
     {
-        "title": "Software Engineer",
-        "subtitle": "Google",
-        "description": "Engaged in executing studies, trial runs with users, brainstorming, sketching blueprints, and crafting refined user experiences and user interfaces for iOS, Android, and the Web. Closely partnering with engineers, product supervisors, and important personnel. Designing experiences that are guided by data and centered on the user.",
-        "dateRange": "March 2020 – Present"
+        "title": "Research Assistant",
+        "subtitle": "Motorola Solutions Foundation",
+        "description": "Performing research in Bioinformatics, in the context of Novel Discoveries of Brainstem Nuclei Localization and Function. I am currently using machine learning algorithms to cluster and classify brainstem nuclei in the Reticular Formation.",
+        "dateRange": "Jan 2024 – Present"
     },
     {
-        "title": "Software Engineer",
-        "subtitle": "Facebook",
-        "description": "Designing sleek, result-oriented, user-friendly interfaces for web and mobile platforms, guaranteeing superior outcomes, coordinating design projects among internal and external teams, guiding new members of the design team, aligning creative outputs with the objectives of clients, and intensely collaborating with developers and engineers.",
-        "dateRange": "March 2019 – 2020"
+        "title": "Lead Game Developer",
+        "subtitle": "Independent Contractor",
+        "description": "Developed several 2D and 3D immersive games using Unity, Unreal Engine, Love2D, Godot, etc... I was responsible for creating game mechanics, designing levels, and implementing game logic. I also worked on the game's UI/UX and implemented multiplayer functionality. My games have reached tens of millions of game plays and have been featured on popular gaming platforms.",
+        "dateRange": "2018 – Present"
     },
     {
-        "title": "Software Engineer",
-        "subtitle": "Amazon",
-        "description": "Generating aesthetic frameworks, models for web and mobile apps, cooperating with the creative team, interested parties, product chiefs and coders in a flexible setting.",
-        "dateRange": "March 2018 – 2019"
+        "title": "Environmental Scientist",
+        "subtitle": "NASA",
+        "description": "Conducted research on the environment of Enceladus, a moon of Saturn, and its potential habitability for life. I was responsible for analyzing data from the Cassini spacecraft in order to determine the best scientific instruments to use for future missions to Enceladus. My team and I established a Preliminary Design Review (PDR) for an orbiter that would be sent to Enceladus to take high-resolution images and collect data on the moon's magnetic field, gravity, and atmosphere.",
+        "dateRange": "Sept – December 2023"
     },
 ]
 
 const education: BackgroundCardProps[] = [
-    {
-        "title": "High School Diploma",
-        "subtitle": "Valencia High School",
-        "description": "",
-        "dateRange": "2022"
-    },
     {
         "title": "Bachelor of Science in Computer Science",
         "subtitle": "DePaul University",
@@ -125,6 +119,12 @@ const education: BackgroundCardProps[] = [
             </div>
         ),
         "dateRange": "Sep 2022 – Present"
+    },
+    {
+        "title": "High School Diploma",
+        "subtitle": "Valencia High School",
+        "description": "",
+        "dateRange": "2022"
     },
 ]
 

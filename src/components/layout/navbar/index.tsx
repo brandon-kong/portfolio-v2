@@ -128,7 +128,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 >
                      <div
-                    className={'flex-col items-center justify-center flex bg-background p-10 pt-navbar pointer-events-auto gap-6'}
+                    className={'flex-col items-center justify-center flex bg-background py-10 px-6 pt-navbar pointer-events-auto gap-6'}
                     >
                          <nav
                         className={'h-auto w-full flex-1'}
