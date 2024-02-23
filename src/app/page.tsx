@@ -106,7 +106,7 @@ export default function Home() {
                             date={blog.date}
                             tags={['Research', 'Bioinformatics']}
                             image={blog.image}
-                            link={'https://depaul.edu'}
+                            link={blog.link}
                             />
                         )
                     })}
