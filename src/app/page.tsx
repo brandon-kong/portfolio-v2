@@ -17,7 +17,7 @@ const blogs: BlogCardProps[] = [
         description: 'In the ever-evolving landscape of technology, AI and machine learning have emerged as pivotal elements in shaping the future of UI/UX design.',
         tags: ['Research', 'Bioinformatics'],
         image: '/blog/blog2.jpg',
-        link: `blog.${BLOG_URL}/testing`,
+        link: `${BLOG_URL}/testing`,
         date: 'Aug 2023'
     },
     {
@@ -25,7 +25,7 @@ const blogs: BlogCardProps[] = [
         description: 'In the ever-evolving landscape of technology, AI and machine learning have emerged as pivotal elements in shaping the future of UI/UX design.',
         tags: ['Research', 'Bioinformatics'],
         image: '/blog/blog3.jpg',
-        link: `blog.${BLOG_URL}/testing`,
+        link: `${BLOG_URL}/testing`,
         date: 'Aug 2023'
     },
 ]
