@@ -1,7 +1,7 @@
 import { Button, BlogCard, H1, H2, P, Tag, BlogCardProps, SlideIn, ProjectSection } from "@/components";
 import { Briefcase, MapPin } from "react-feather";
 
-import { SITE_URL } from "@/util/variables";
+import { SITE_URL, BLOG_URL } from "@/util/variables";
 
 const blogs: BlogCardProps[] = [
     {
@@ -9,7 +9,7 @@ const blogs: BlogCardProps[] = [
         description: 'In the ever-evolving landscape of technology, AI and machine learning have emerged as pivotal elements in shaping the future of UI/UX design.',
         tags: ['Research', 'Bioinformatics'],
         image: '/blog/blog1.jpg',
-        link: `blog.${SITE_URL}/testing`,
+        link: `${BLOG_URL}/testing`,
         date: 'Aug 2023'
     },
     {
@@ -17,7 +17,7 @@ const blogs: BlogCardProps[] = [
         description: 'In the ever-evolving landscape of technology, AI and machine learning have emerged as pivotal elements in shaping the future of UI/UX design.',
         tags: ['Research', 'Bioinformatics'],
         image: '/blog/blog2.jpg',
-        link: `blog.${SITE_URL}/testing`,
+        link: `blog.${BLOG_URL}/testing`,
         date: 'Aug 2023'
     },
     {
@@ -25,7 +25,7 @@ const blogs: BlogCardProps[] = [
         description: 'In the ever-evolving landscape of technology, AI and machine learning have emerged as pivotal elements in shaping the future of UI/UX design.',
         tags: ['Research', 'Bioinformatics'],
         image: '/blog/blog3.jpg',
-        link: `blog.${SITE_URL}/testing`,
+        link: `blog.${BLOG_URL}/testing`,
         date: 'Aug 2023'
     },
 ]
