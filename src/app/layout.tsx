@@ -16,6 +16,19 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: "Brandon Kong",
     description: "Brandon Kong's personal website",
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: "https://bdkong.com",
+        siteName: "Brandon Kong",
+        videos: [
+            {
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                width: 1280,
+                height: 720,
+            },
+        ]
+    },
 };
 
 export default function RootLayout({
@@ -25,9 +38,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <head>
-                <meta property="og:video" content="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
-            </head>
             <body className={inter.className}>
                 
                 <div className={'bg-background text-white min-h-screen flex'}>
