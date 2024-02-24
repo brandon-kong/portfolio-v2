@@ -30,8 +30,8 @@ export default function BlogCard ({ title, description, tags, image, link, date 
                         >
                             {title}
                         </H3>
-                        <P className={'text-md leading-[1.8] text-background-secondary-300'}>
-                            {description}
+                        <P className={'text-md leading-[1.8] text-background-secondary-300 max-w-xl'}>
+                            {description.length > 150 ? description.slice(0, 150) + '...' : description}
                         </P>
                         <Button
                         href={link}
