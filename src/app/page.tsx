@@ -1,34 +1,7 @@
-import { Button, BlogCard, H1, H2, P, Tag, BlogCardProps, SlideIn, ProjectSection } from "@/components";
+import { Button, H1, H2, P, Tag, SlideIn, ProjectSection } from "@/components";
 import { Briefcase, MapPin } from "react-feather";
 
-import { SITE_URL, BLOG_URL } from "@/util/variables";
-
-const blogs: BlogCardProps[] = [
-    {
-        title: 'The Future of UX: Embracing AI and Machine Learning',
-        description: 'In the ever-evolving landscape of technology, AI and machine learning have emerged as pivotal elements in shaping the future of UI/UX design.',
-        tags: ['Research', 'Bioinformatics'],
-        image: '/blog/blog1.jpg',
-        link: `${BLOG_URL}/testing`,
-        date: 'Aug 2023'
-    },
-    {
-        title: 'The Future of UX: Embracing AI and Machine Learning',
-        description: 'In the ever-evolving landscape of technology, AI and machine learning have emerged as pivotal elements in shaping the future of UI/UX design.',
-        tags: ['Research', 'Bioinformatics'],
-        image: '/blog/blog2.jpg',
-        link: `${BLOG_URL}/testing`,
-        date: 'Aug 2023'
-    },
-    {
-        title: 'The Future of UX: Embracing AI and Machine Learning',
-        description: 'In the ever-evolving landscape of technology, AI and machine learning have emerged as pivotal elements in shaping the future of UI/UX design.',
-        tags: ['Research', 'Bioinformatics'],
-        image: '/blog/blog3.jpg',
-        link: `${BLOG_URL}/testing`,
-        date: 'Aug 2023'
-    },
-]
+import BlogSection from "@/components/blog-section";
 
 export default function Home() {
     return (
@@ -95,22 +68,7 @@ export default function Home() {
             <SlideIn>
                 <H2>Blog</H2>
 
-                <div
-                className={'flex flex-col gap-8 sidebar-shown:gap-16'}>
-                    {blogs.map((blog, index) => {
-                        return (
-                            <BlogCard
-                            key={index}
-                            title={blog.title}
-                            description={blog.description}
-                            date={blog.date}
-                            tags={['Research', 'Bioinformatics']}
-                            image={blog.image}
-                            link={blog.link}
-                            />
-                        )
-                    })}
-                </div>
+                <BlogSection />
             </SlideIn>
         </main>
     );

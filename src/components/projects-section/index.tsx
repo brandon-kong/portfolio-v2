@@ -1,4 +1,4 @@
-import { SlideIn, ProjectCard } from "..";
+import { ProjectCard } from "..";
 import { getAllProjects } from "@/util/projects";
 
 export default async function ProjectsSection () {

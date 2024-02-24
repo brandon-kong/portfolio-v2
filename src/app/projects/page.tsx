@@ -1,9 +1,7 @@
 import { ProjectSection, BlogCard, H1, P, SlideIn } from "@/components";
 import { getAllProjects } from "@/util/projects";
 
-export default async function Projects() {
-    const projects = await getAllProjects() || [];
-    
+export default async function Projects() {    
     return (
         <main className="w-full flex flex-col space-y-20 sidebar-shown:space-y-32">
             <div
