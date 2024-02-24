@@ -1,6 +1,8 @@
 import { H1, P, SlideIn } from "@/components";
 import BlogSection from "@/components/blog-section";
 
+export const revalidate = 30;
+
 export default async function Blog() {
     return (
         <main className="w-full flex flex-col space-y-20 sidebar-shown:space-y-32">

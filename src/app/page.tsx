@@ -3,6 +3,8 @@ import { Briefcase, MapPin } from "react-feather";
 
 import BlogSection from "@/components/blog-section";
 
+export const revalidate = 30;
+
 export default function Home() {
     return (
         <main className="w-full flex flex-col space-y-20 sidebar-shown:space-y-32 items-center">
