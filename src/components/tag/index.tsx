@@ -1,5 +1,5 @@
 const variantDict = {
-    "primary": "bg-primary-300/30 text-primary-300/80",
+    "primary": "bg-primary-300/50 text-primary-50",
 }
 
 type Variant = keyof typeof variantDict;
@@ -12,7 +12,7 @@ export default function Tag({ children, variant = "primary" }: {
         <span
         className={`flex justify-center items-center gap-2 w-fit px-3 h-6 rounded-full text-sm font-normal ${variantDict[variant]}`}
         >
-            <div className={'w-[6px] aspect-square bg-primary-300/80 rounded-full'}>
+            <div className={'w-[6px] aspect-square bg-primary-200 rounded-full'}>
                  
             </div>
             {children}
