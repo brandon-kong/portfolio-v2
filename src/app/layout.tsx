@@ -23,19 +23,11 @@ export const metadata: Metadata = {
         siteName: "Brandon Kong",
         videos: [
             {
-                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                url: "/previews/gradient.mp4",
                 width: 1280,
                 height: 720,
             },
         ],
-        images: [
-            {
-                url: "https://bdkong.com/blog/blog1.jpg",
-                width: 800,
-                height: 600,
-                alt: "Og Image Alt",
-            }
-        ]
     },
 };
 
