@@ -27,6 +27,14 @@ export const metadata: Metadata = {
                 width: 1280,
                 height: 720,
             },
+        ],
+        images: [
+            {
+                url: "https://bdkong.com/blog/blog1.jpg",
+                width: 800,
+                height: 600,
+                alt: "Og Image Alt",
+            }
         ]
     },
 };
