@@ -1,5 +1,5 @@
 const variantDict = {
-    "primary": "bg-primary-300/50 text-primary-50",
+    "primary": "bg-primary-300/60 text-black",
 }
 
 type Variant = keyof typeof variantDict;

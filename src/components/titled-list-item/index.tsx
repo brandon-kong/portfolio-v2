@@ -10,7 +10,7 @@ export type TitledListItemProps = {
 
 export default function TitledListitem ({ title, description, number }: TitledListItemProps) {
     return (
-        <div
+        <li
         className={'w-full bg-background-secondary flex flex-col lg:flex-row items-start justify-center gap-6'}
         >
             <div
@@ -43,6 +43,6 @@ export default function TitledListitem ({ title, description, number }: TitledLi
                 
                
             </div>
-        </div>
+        </li>
     )
 }
