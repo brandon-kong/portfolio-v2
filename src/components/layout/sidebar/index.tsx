@@ -36,7 +36,7 @@ const navItems = [
     },
     {
         name: 'Contact',
-        href: '/contact',
+        href: '/',
         icon: Mail
     }
     
@@ -101,6 +101,7 @@ export default function Sidebar() {
                             key={index}
                             href={link.href}
                             target="_blank"
+                            aria-label="Social Media Link"
                             rel="noreferrer"
                             className="group w-8 h-8 rounded-full aspect-square p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900"
                             >
@@ -177,6 +178,7 @@ export default function Sidebar() {
                             key={index}
                             href={link.href}
                             target="_blank"
+                            aria-label="Social Media Link"
                             rel="noreferrer"
                             className="group w-8 h-8 rounded-full aspect-square p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900"
                             >
