@@ -38,7 +38,7 @@ export default function BlogCard ({ title, description, tags, image, link, date 
                         variant={'outline-mono'}
                         className={'w-full sidebar-shown:w-fit mt-4'}
                         >
-                            Read More
+                            Read More About This Blog
                         </Button>
                     </div>
                 </div>
