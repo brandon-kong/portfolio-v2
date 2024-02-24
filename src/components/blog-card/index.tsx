@@ -47,7 +47,7 @@ export default function BlogCard ({ title, description, tags, image, link, date 
             </div>
 
             <div className={'aspect-[1.333333/1] w-full sidebar-shown:w-[420px] relative bg-background-secondary-300 rounded-xl overflow-hidden'} >
-                <img src={image} alt={title} fill={true} className={'w-full h-full absolute object-cover transition-transform duration-500'} />
+                <img src={image} alt={title} className={'w-full h-full absolute object-cover transition-transform duration-500'} />
             </div>
         </div>
     )
