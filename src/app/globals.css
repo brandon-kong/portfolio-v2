@@ -24,7 +24,7 @@
     --sidebar-hidden: 875px;
 }
 
-@media (max-width: 1368px) {
+@media (max-width: 1367px) {
     :root {
       --sidebar-width: 80px;
       --content-width: 728px;
