@@ -2,6 +2,8 @@
 
 import { BlogCard, H1, P, BlogCardProps, SlideIn } from "@/components";
 
+import { BLOG_URL } from "@/util/variables";
+
 const blogs: BlogCardProps[] = [
     {
         title: 'The Future of UX: Embracing AI and Machine Learning',
