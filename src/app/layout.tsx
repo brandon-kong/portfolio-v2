@@ -28,6 +28,14 @@ export const metadata: Metadata = {
                 height: 720,
             },
         ],
+        images: [
+            {
+                url: "/previews/gradient.jpg",
+                width: 800,
+                height: 600,
+                alt: "Gradient",
+            },
+        ],
     },
 };
 
