@@ -32,3 +32,5 @@ export type { BackgroundCardProps } from './background-card';
 export { default as Navbar } from './layout/navbar';
 
 export { default as ProjectSection } from './projects-section';
+
+export { default as Input, Textbox } from './input';
