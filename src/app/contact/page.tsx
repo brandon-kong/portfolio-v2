@@ -43,8 +43,8 @@ export default function Contact() {
                 onSubmit={onSubmit}
                 className={'flex flex-col gap-4'}
                 >
-                    <Input name={'name'} label={'Name'} placeholder={'Enter your name'} />
-                    <Input name={'email'} label={'Email'} placeholder={'Enter your email'}
+                    <Input required name={'name'} label={'Name'} placeholder={'Enter your name'} />
+                    <Input required name={'email'} label={'Email'} placeholder={'Enter your email'}
                     type="email"
                     />
 

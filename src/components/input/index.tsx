@@ -20,6 +20,7 @@ type SizeKey = keyof typeof sizes
 
 export type InputProps = {
     className?: string
+    required?: boolean
     name?: string
     type?: string
     placeholder?: string
@@ -34,6 +35,7 @@ export type InputProps = {
 
 export type TextboxProps = {
     className?: string
+    required?: boolean
     name?: string
     placeholder?: string
     variant?: VariantKey
