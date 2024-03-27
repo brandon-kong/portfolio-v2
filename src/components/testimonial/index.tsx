@@ -14,7 +14,7 @@ export type TestimonialCardProps = {
 export default function TestimonialCard ({ className, content, name, title, image = '' }: TestimonialCardProps) {
     return (
         <div
-        className={cn('flex flex-col gap-5 w-full rounded-xl p-10 bg-background-secondary-900/50', className)}
+        className={cn('flex flex-col gap-5 w-full rounded-xl p-10 bg-background-secondary-light-100 dark:bg-background-secondary-900/50', className)}
         >
             <P>
                 {content}
@@ -30,7 +30,7 @@ export default function TestimonialCard ({ className, content, name, title, imag
                      <P className={'text-md'}>
                     {name}
                     </P>
-                    <P className={'text-sm text-background-secondary-300'}>
+                    <P className={'text-sm text-background-secondary-500 dark:text-background-secondary-300'}>
                         {title}
                     </P>
                 </div>

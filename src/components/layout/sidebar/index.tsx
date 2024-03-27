@@ -2,7 +2,7 @@
 
 import { H4, P } from "@/components";
 import Image from "next/image";
-import { Home, Briefcase, User, PenTool, Mail } from "react-feather";
+import { Home, Briefcase, User, PenTool, Mail, Moon, Sun } from "react-feather";
 import cn from "@/util/cn";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +11,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Moon } from "react-feather";
+import { useTheme } from "next-themes";
 
 const navItems = [
     {
@@ -58,6 +58,7 @@ const links = [
 
 export default function Sidebar() {
     const pathname = usePathname();
+    const { theme, setTheme } = useTheme();
 
   return (
     <aside className="hidden sidebar-shown:flex flex-col justify-between fixed py-10 px-3 icon-only:px-6 w-sidebar h-full">
@@ -103,7 +104,7 @@ export default function Sidebar() {
                             target="_blank"
                             aria-label="Social Media Link"
                             rel="noreferrer"
-                            className="group w-8 h-8 rounded-full aspect-square p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900"
+                            className="group w-8 h-8 rounded-full aspect-square p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-light-300/30 dark:hover:bg-background-secondary-900"
                             >
                                 <FontAwesomeIcon
                                 icon={link.icon}
@@ -127,7 +128,7 @@ export default function Sidebar() {
                         return (
                         <li key={index} 
                         data-selected={isSelected}
-                        className="aspect-square icon-only:aspect-auto w-12 icon-only:w-full group h-auto icon-only:h-[40px] hover:bg-background-secondary-900/40 rounded-xl px-0 icon-only:px-3 transition-colors duration-300 cursor-pointer data-[selected=true]:bg-background-secondary-900"
+                        className="aspect-square icon-only:aspect-auto w-12 icon-only:w-full group h-auto icon-only:h-[40px] hover:bg-background-secondary-light-300/30 dark:hover:bg-background-secondary-900/40 rounded-xl px-0 icon-only:px-3 transition-colors duration-300 cursor-pointer data-[selected=true]:bg-background-secondary-900"
                         >
                             <Link
                             href={item.href}
@@ -154,9 +155,22 @@ export default function Sidebar() {
         className={'hidden items-center justify-center icon-only:flex'}
         >
             <div
-            className={'group rounded-full w-8 h-8 p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900'}
+            className={'group rounded-full w-8 h-8 p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-light-300 dark:hover:bg-background-secondary-900'}
             >
-                <Moon className="cursor-pointer w-6 h-6 stroke-background-secondary-400 group-hover:stroke-background-secondary-100 transition-colors duration-300" />
+                {
+                    theme === 'dark' ? <Sun
+                    data-hide-on-theme="light"
+                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                    className="cursor-pointer w-6 h-6 stroke-background-secondary-400 group-hover:stroke-background-secondary-light-900 dark:group-hover:stroke-background-secondary-100 transition-colors duration-300"
+                    /> : <Moon
+                    data-hide-on-theme="dark"
+                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+
+                    className="cursor-pointer w-6 h-6 stroke-background-secondary-400 group-hover:stroke-background-secondary-light-900 dark:group-hover:stroke-background-secondary-100 transition-colors duration-300"
+                    />
+
+                }
+               
             </div>
         </div>
 
@@ -193,7 +207,19 @@ export default function Sidebar() {
                     <div
                     className={'mt-4 group rounded-full w-8 h-8 p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900'}
                     >
-                        <Moon className="cursor-pointer w-6 h-6 stroke-background-secondary-400 group-hover:stroke-background-secondary-100 transition-colors duration-300" />
+                        {
+                            theme === 'dark' ? <Sun
+                            data-hide-on-theme="dark"
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            className="cursor-pointer w-6 h-6 stroke-background-secondary-400 group-hover:stroke-background-secondary-100 transition-colors duration-300"
+                        />
+                        : <Moon
+                            data-hide-on-theme="light"
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            className="dark:hidden cursor-pointer w-6 h-6 stroke-background-secondary-400 group-hover:stroke-background-secondary-100 transition-colors duration-300"
+                            />
+                        }
+                      
                     </div>
                     
                 </div>

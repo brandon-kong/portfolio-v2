@@ -10,7 +10,7 @@ export type ProjectBackgroundCardProps = {
 export default function ProjectBackgroundCard ({ title, children }: ProjectBackgroundCardProps) {
     return (
         <div
-        className={'w-full h-full bg-background-secondary flex items-center justify-center gap-4'}
+        className={'w-full h-full flex items-center justify-center gap-4'}
         >
             <div
             className={'flex flex-col gap-1 w-full'}

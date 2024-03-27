@@ -5,12 +5,12 @@ const shared = "select-none inline-flex items-center justify-center whitespace-n
 
 const variants = {
     "primary": "bg-primary hover:bg-primary/90 text-black shadow-sm",
-    "background": "bg-background-secondary-800 hover:bg-background-secondary-700/90 text-white shadow-sm",
+    "background": "bg-background-secondary-light-200  dark:bg-background-secondary-800 hover:bg-background-secondary-light-300 dark:hover:bg-background-secondary-700/90 text-black dark:text-white shadow-sm",
     "primary-light": "bg-primary-100 hover:bg-primary-200 text-primary-900 shadow-sm",
     "secondary": "bg-secondary-500 hover:bg-secondary-600 text-black shadow-sm",
     "ghost": "bg-transparent hover:bg-gray-100 text-gray-700",
-    "outline": "bg-transparent border border-primary-400 text-primary-400 hover:border-primary-500",
-    "outline-mono": "bg-transparent border border-background-secondary-800 text-background-secondary-100 hover:border-background-secondary-500",
+    "outline": "bg-transparent border border-primary-500 dark:border-primary-400 text-primary-600 dark:text-primary-400 hover:border-primary-600 dark:hover:border-primary-500",
+    "outline-mono": "bg-transparent border border-background-secondary-600 dark:border-background-secondary-800 text-background-secondary-400 dark:text-background-secondary-100 hover:border-background-secondary-700 dark:hover:border-background-secondary-500",
     "link": "bg-transparent text-primary-700 underline inline-flex h-fit px-0",
     "danger": "bg-red-500 hover:bg-red-600 text-white shadow-sm",
 };

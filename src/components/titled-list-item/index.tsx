@@ -11,10 +11,10 @@ export type TitledListItemProps = {
 export default function TitledListitem ({ title, description, number }: TitledListItemProps) {
     return (
         <li
-        className={'w-full bg-background-secondary flex flex-col lg:flex-row items-start justify-center gap-6'}
+        className={'w-full flex flex-col lg:flex-row items-start justify-center gap-6'}
         >
             <div
-            className={'bg-primary-800/30 h-10 w-10 flex place-content-center items-center rounded-full text-primary-300 text-lg aspect-square'}
+            className={'bg-primary-500 dark:bg-primary-800/30 h-10 w-10 flex place-content-center items-center rounded-full text-primary-200 dark:text-primary-300 text-lg aspect-square'}
             >
                 { number }
             </div>
@@ -27,7 +27,7 @@ export default function TitledListitem ({ title, description, number }: TitledLi
                     <div
                     className={'w-full'}
                     >
-                        <P className={'text-white font-medium'}>
+                        <P className={'text-background-secondary-light-900 dark:text-white font-medium'}>
                             {title}
                         </P>
                     </div>

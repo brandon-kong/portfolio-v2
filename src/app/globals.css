@@ -12,6 +12,7 @@
     /* Colors */
     --color-primary: #fed53a;
     --color-background: #141414;
+    --color-background-light: #f3f3f3;
     --color-background-secondary: #1a1a1a;
 
     /* Fonts */
@@ -22,6 +23,16 @@
 
     --sidebar-icon-only: 1368px;
     --sidebar-hidden: 875px;
+}
+
+[data-theme='dark'] {
+    --color-background: #f3f3f3;
+    --color-background-secondary: #e6e6e6;
+}
+
+[data-theme='dark'] [data-hide-on-theme='dark'],
+[data-theme='light'] [data-hide-on-theme='light'] {
+  display: none;
 }
 
 @media (max-width: 1367px) {

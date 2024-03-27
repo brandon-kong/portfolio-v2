@@ -12,7 +12,7 @@ export type BlogCardProps = {
 export default function BlogCard ({ title, description, tags, image, link, date }: BlogCardProps) {
     return (
         <div
-        className={'w-full h-full bg-background-secondary flex flex-col-reverse sidebar-shown:flex-row items-center justify-center gap-10'}
+        className={'w-full h-full flex flex-col-reverse sidebar-shown:flex-row items-center justify-center gap-10'}
         >
             <div
             className={'flex flex-col gap-1 w-full'}
@@ -20,7 +20,7 @@ export default function BlogCard ({ title, description, tags, image, link, date 
                 <div
                 className={'flex flex-col gap-3'}
                 >
-                    <P className={'text-sm font-semibold text-background-secondary-400'}>{date}</P>
+                    <P className={'text-sm font-semibold text-background-secondary-600 dark:text-background-secondary-400'}>{date}</P>
 
                     <div
                     className={'flex flex-col gap-2'}
@@ -30,7 +30,7 @@ export default function BlogCard ({ title, description, tags, image, link, date 
                         >
                             {title}
                         </H3>
-                        <P className={'text-md leading-[1.8] text-background-secondary-300 max-w-xl'}>
+                        <P className={'text-md leading-[1.8] text-background-secondary-500 dark:text-background-secondary-300 max-w-xl'}>
                             {description.length > 150 ? description.slice(0, 150) + '...' : description}
                         </P>
                         <Button

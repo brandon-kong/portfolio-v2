@@ -49,9 +49,9 @@ export default async function Project({ params }: { params: { slug: string } }) 
 
     return (
         <main className="w-full flex flex-col gap-20 sidebar-shown:space-y-3 -mt-10 sidebar-shown:-mt-20">
-            
+        
             <div
-            className={'w-full border-b-2 border-background-secondary-900/50 flex items-center gap-2 pb-5'}
+            className={'w-full border-b-2 border-background-secondary-light-300/50 dark:border-background-secondary-900/50 flex items-center gap-2 pb-5'}
             >
                 <Link href={'/projects'} className={'group flex items-center gap-2'}>
                     <ChevronLeft width={15} height={15} className={'transition-colors duration-300 stroke-background-secondary-400 group-hover:stroke-background-secondary-100'} />
@@ -147,7 +147,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
             </SlideIn>
             
             <SlideIn>
-                <hr className={'w-full border-t-2 border-background-secondary-900/50'} />
+                <hr className={'w-full border-t-2 border-background-secondary-light-300/50 dark:border-background-secondary-900/50'} />
             </SlideIn>
             
 
@@ -200,7 +200,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
             </SlideIn>
 
             <SlideIn>
-                <hr className={'w-full border-t-2 border-background-secondary-900/50'} />
+            <hr className={'w-full border-t-2 border-background-secondary-light-300/50 dark:border-background-secondary-900/50'} />
             </SlideIn>
 
             <SlideIn>

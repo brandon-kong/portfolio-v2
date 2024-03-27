@@ -5,7 +5,7 @@ const shared = "select-none inline-flex items-center justify-center whitespace-n
 const textboxShared = "min-h-[150px] p-4 whitespace-pre-line resize-none overflow-auto";
 
 const variants = {
-    "solid": "bg-background-secondary-800 hover:bg-background-secondary-700/90 text-white shadow-sm ring-primary-300",
+    "solid": "bg-background-secondary-light-200 dark:bg-background-secondary-800 hover:bg-background-secondary-light-100 dark:hover:bg-background-secondary-700/90 text-black dark:text-white shadow-sm ring-primary-300",
 };
 
 const sizes = {

@@ -12,7 +12,7 @@ export type BackgroundCardProps = {
 export default function BackgroundCard ({ title, subtitle, description, dateRange }: BackgroundCardProps) {
     return (
         <div
-        className={'w-full h-full bg-background-secondary flex flex-row items-center justify-center gap-10'}
+        className={'w-full h-full flex flex-row items-center justify-center gap-10'}
         >
             <div
             className={'flex flex-col gap-1 w-full'}

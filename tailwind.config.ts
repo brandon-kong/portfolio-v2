@@ -10,6 +10,7 @@ const config: Config = {
         extend: {
             colors: {
                 "background": 'var(--color-background)',
+                "background-light": 'var(--color-background-light)',
                 "background-secondary": {
                     'DEFAULT': 'var(--color-background-secondary)',
                     '50': '#f6f6f6',
@@ -24,6 +25,21 @@ const config: Config = {
                     '900': '#3d3d3d',
                     '950': '#1a1a1a',
                 },
+                "background-secondary-light": {
+                    'DEFAULT': 'var(--color-background-secondary-light)',
+                    '50': '#f9f9f9',
+                    '100': '#f2f2f2',
+                    '200': '#e6e6e6',
+                    '300': '#cccccc',
+                    '400': '#b3b3b3',
+                    '500': '#999999',
+                    '600': '#8c8c8c',
+                    '700': '#808080',
+                    '800': '#757575',
+                    '900': '#6b6b6b',
+                    '950': '#4d4d4d',
+                },
+
                 "primary": {
                     'DEFAULT': 'var(--color-primary)',
                     '50': '#fffceb',
@@ -74,6 +90,7 @@ const config: Config = {
         }
     },
     plugins: [],
+    darkMode: 'class',
 };
 
 export default config;

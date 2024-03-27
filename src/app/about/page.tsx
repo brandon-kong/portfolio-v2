@@ -33,48 +33,79 @@ const programmingLanguages = [
     }
 ]
 
-const tools = [
+const databases = [
+    {
+        "name": "MongoDB",
+        "className": "rounded-t-xl sidebar-shown:rounded-tr-none"
+    },
+    {
+        "name": "PostgreSQL",
+        "className": "sidebar-shown:rounded-tr-xl"
+    },
+    {
+        "name": "Redis",
+    },
+    {
+        "name": "SQLite",
+        "className": "sidebar-shown:rounded-br-xl"
+    },
+    {
+        "name": "Firebase",
+        "className": "rounded-b-xl"
+    }
+];
+
+const frameworks = [
     {
         "name": "React/Next.js",
         "className": "rounded-t-xl sidebar-shown:rounded-tr-none"
     },
     {
-        "name": "TailwindCSS",
+        "name": "Vue.js",
         "className": "sidebar-shown:rounded-tr-xl"
+    },
+    {
+        "name": "Django",
+    },
+    {
+        "name": "Flask",
+    },
+    {
+        "name": "FastAPI",
     },
     {
         "name": "Node.js",
     },
     {
         "name": "Express",
+        "className": "sidebar-shown:rounded-bl-xl"
     },
     {
-        "name": "MongoDB",
+        "name": "ASP.NET Core",
+        "className": "sidebar-shown:rounded-br-xl"
+    },
+];
+
+const tools = [
+    {
+        "name": "TailwindCSS",
+        "className": "rounded-t-xl sidebar-shown:rounded-tr-none"
     },
     {
-        "name": "PostgreSQL",
-    },
-    {
-        "name": "Redis",
-    },
-    {
-        "name": "AWS"
+        "name": "AWS",
+        "className": "sidebar-shown:rounded-tr-xl"
     },
     {
         "name": "JWT & OAuth",
     },
 
     {
-        "name": "ASP.NET Core",
-    },
-
-    {
         "name": "RESTful APIs",
-        "className": "sidebar-shown:rounded-bl-xl"
+        "className": "sidebar-shown:rounded-br-xl"
     },
     {
         "name": "Docker",
-        "className": "rounded-b-xl sidebar-shown:rounded-bl-none"
+        "className": "rounded-b-xl"
     }
 
 ]
@@ -139,7 +170,7 @@ export default function Projects() {
                 >
                     <div>
                         <H1>Brandon Kong</H1>
-                        <H1 className={'text-background-secondary-300'}>Full-Stack Developer</H1>
+                        <H1 className={'text-background-secondary-500 dark:text-background-secondary-300'}>Full-Stack Developer</H1>
                     </div>
                     
                     
@@ -172,6 +203,42 @@ export default function Projects() {
                 <div
                 className={'h-fit grid grid-cols-1 sidebar-shown:grid-cols-2 gap-1'}>
                     {programmingLanguages.map((prog, index) => {
+                        return (
+                            <GridCard
+                            className={prog.className}
+                            key={index}
+                            >
+                                { prog.name }
+                            </GridCard>
+                        )
+                    })}
+                </div>
+            </SlideIn>
+
+            <SlideIn>
+                <H2>Databases</H2>
+
+                <div
+                className={'h-fit grid grid-cols-1 sidebar-shown:grid-cols-2 gap-1'}>
+                    {databases.map((prog, index) => {
+                        return (
+                            <GridCard
+                            className={prog.className}
+                            key={index}
+                            >
+                                { prog.name }
+                            </GridCard>
+                        )
+                    })}
+                </div>
+            </SlideIn>
+
+            <SlideIn>
+                <H2>Frameworks</H2>
+
+                <div
+                className={'h-fit grid grid-cols-1 sidebar-shown:grid-cols-2 gap-1'}>
+                    {frameworks.map((prog, index) => {
                         return (
                             <GridCard
                             className={prog.className}
@@ -223,7 +290,7 @@ export default function Projects() {
                             {
                                 index !== experiences.length - 1 && (
                                     <div
-                                    className={'w-full border-t-2 border-background-secondary-900/50'}
+                                    className={'w-full border-t-2 border-background-secondary-light-300/50 dark:border-background-secondary-900/50'}
                                     />
                                 )
                             }
@@ -254,7 +321,7 @@ export default function Projects() {
                             {
                                 index !== education.length - 1 && (
                                     <div
-                                    className={'w-full border-t-2 border-background-secondary-900/50'}
+                                    className={'w-full border-t-2 border-background-secondary-light-300/50 dark:border-background-secondary-900/50'}
                                     />
                                 )
                             }

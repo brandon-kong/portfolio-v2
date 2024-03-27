@@ -68,7 +68,7 @@ export default function Navbar() {
     <div
     className={'flex-col flex sidebar-shown:hidden'}
     >
-        <aside className="z-[100] bg-background flex flex-row justify-center fixed py-3 px-6 icon-only:px-6 w-full h-navbar">
+        <aside className="z-[100] bg-background-light dark:bg-background flex flex-row justify-center fixed py-3 px-6 icon-only:px-6 w-full h-navbar">
             <div
             className={'flex flex-row items-center justify-between w-full'}
             >
@@ -105,7 +105,7 @@ export default function Navbar() {
             >
                 <button
                 onClick={() => setOpen(!open)}
-                className={'group cursor-pointer flex items-center justify-center rounded-xl w-10 h-10 p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-900'}
+                className={'group cursor-pointer flex items-center justify-center rounded-xl w-10 h-10 p-1 bg-transparent transition-colors duration-300 hover:bg-background-secondary-light-400 dark:hover:bg-background-secondary-900'}
                 >
                     <Menu className="w-6 h-6 stroke-background-secondary-400 group-hover:stroke-background-secondary-100 transition-colors duration-300" />
                 </button>
@@ -124,11 +124,11 @@ export default function Navbar() {
                 visibility: { delay: open ? 0 : 0.2 }
             } }
 
-                className={'fixed top-0 left-0 w-full h-full bg-background-secondary-950/50 z-[99]'}
+                className={'fixed top-0 left-0 w-full h-full bg-background-secondary-light-100 dark:bg-background-secondary-950/50 z-[99]'}
                 onClick={() => setOpen(false)}
                 >
                      <div
-                    className={'flex-col items-center justify-center flex bg-background py-10 px-6 pt-navbar pointer-events-auto gap-6'}
+                    className={'flex-col items-center justify-center flex bg-background-light dark:bg-background py-10 px-6 pt-navbar pointer-events-auto gap-6'}
                     >
                          <nav
                         className={'h-auto w-full flex-1'}
@@ -140,7 +140,7 @@ export default function Navbar() {
                                     return (
                                     <li key={index} 
                                     data-selected={isSelected}
-                                    className="w-full group h-[40px] hover:bg-background-secondary-900/40 rounded-xl px-3 transition-colors duration-300 cursor-pointer data-[selected=true]:bg-background-secondary-900"
+                                    className="w-full group h-[40px] hover:bg-background-secondary-light-300/30 dark:hover:bg-background-secondary-900/40 rounded-xl px-3 transition-colors duration-300 cursor-pointer data-[selected=true]:bg-background-secondary-900"
                                     >
                                         <Link
                                         href={item.href}

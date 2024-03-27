@@ -11,7 +11,7 @@ export default function ProjectCard ({ project }: ProjectCardProps) {
     return (
         <Link href={`/projects/${project.slug}`}>
             <div
-            className={'group w-full bg-background-secondary flex flex-col items-center justify-center gap-5'}
+            className={'group w-full  flex flex-col items-center justify-center gap-5'}
             >
                 <div className={'aspect-[1.3/1] w-full relative bg-background-secondary-300 rounded-xl overflow-hidden'} >
                     <Image src={project.head_image} alt={project.name} fill={true} className={'w-full h-full absolute group-hover:scale-110 transition-transform duration-500'} />

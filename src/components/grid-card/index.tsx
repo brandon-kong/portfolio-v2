@@ -1,6 +1,3 @@
-import Image from "next/image"
-import { Button, H3, H4, P } from ".."
-import Link from "next/link"
 import cn from "@/util/cn"
 
 export type GridCardProps = {
@@ -11,7 +8,7 @@ export type GridCardProps = {
 export default function GridCard ({ className, children }: GridCardProps) {
     return (
         <div
-        className={cn('w-full p-5 bg-background-secondary-900/50', className)}
+        className={cn('w-full p-5 bg-background-secondary-light-200 dark:bg-background-secondary-900/50 text-background-secondary-400 dark:text-background-secondary-300', className)}
         >
             { children }
         </div>
